@@ -1,0 +1,113 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div id='nova_sala'>
+    <input type="text" name="input" placeholder="Digite o Nome da Sala...">
+    <div class="jogos">
+        <div class="quiz">
+
+        </div>
+        <div class="meteoro">
+
+        </div>
+        <div class="mestre">
+
+        </div>
+    </div>
+    <button class="salvar">Salvar</button>
+    <div id='duvida_meteoro'>
+        <button>X</button>
+        <div class="explicacao">
+            <h1>Meteoro</h1>
+            <p>
+                No jogo do meteoro temos 3 meteoros contendo 3 sinais de letra aleatoriamente escolhidas
+                a partir do momento que o jogo começa os meteoros começam a cair, o jogador tem 20 segundos
+                para selecionar no teclado as letras certas correspondentes aos sinais do meteoro, se o meteoro
+                chegar na linha limite antes de você acertar o sinal, você perderá pontos do total, se acertar você
+                ganha os pontos.
+            </p>
+        </div>
+    </div>
+    <div id='duvida_mestre'>
+        <button>X</button>
+        <div class="explicacao">
+            <h1>O Mestre Mandou</h1>
+            <p>
+                No jogo o mestre mandou é preciso ter acesso a câmera, será pedido para fazer um sinal,
+                nosso algoritmo irá detectar se o sinal feito para câmera está correto ou não, caso atinja
+                um minimo de 70% de acerto o sinal será considerado correto e os pontos serão contabilizado
+                caso contrário o sinal será considerado incorreto.
+            </p>
+        </div>
+    </div>
+    <div id='modal_quiz'>
+        <h1>Quiz</h1>
+        <div class="topicos">
+            <div id='nova_pergunta'>
+                <p> + Nova Pergunta</p>
+
+            </div>
+            <div id='historia'>
+                <p>História</p>
+                <div class="quantidade">
+                    <button>+</button>
+                    <label>0</label>
+                    <button>-</button>
+                </div>
+            </div>
+            <div id='alfabeto'>
+                <p>Alfabeto</p>
+                <div class="quantidade">
+                    <button>+</button>
+                    <label>0</label>
+                    <button>-</button>
+                </div>
+            </div>
+            <div id='numerais'>
+                <p>Numerais</p>
+                <div class="quantidade">
+                    <button>+</button>
+                    <label>0</label>
+                    <button>-</button>
+                </div>
+            </div>
+            <div id='saudacoes'>
+                <p>Saudações</p>
+                <div class="quantidade">
+                    <button>+</button>
+                    <label>0</label>
+                    <button>-</button>
+                </div>
+            </div>
+            <div id='customizadas'>
+                <p>Customizadas</p>
+                <div class="quantidade">
+                    <button>+</button>
+                    <label>0</label>
+                    <button>-</button>
+                </div>
+            </div>
+            <div id='cadastrar_pergunta'>
+                <h1>Nova Pergunta</h1>
+                <input type="text" name="input" placeholder="Digite a Descrição...">
+                <div class='pergunta'>
+                    <input type="radio" id="primeira" name="fav_language" value="primeira">
+                    <input type="text" name="input" placeholder="Digite a alternativa...">
+                </div>
+                <div class='pergunta'>
+                    <input type="radio" id="segunda" name="fav_language" value="segunda">
+                    <input type="text" name="input" placeholder="Digite a alternativa...">
+                </div>
+                <div class='pergunta'>
+                    <input type="radio" id="terceira" name="fav_language" value="terceira">
+                    <input type="text" name="input" placeholder="Digite a alternativa...">
+                </div>
+                <span>Selecione a alternativa correta</span>
+            </div>
+            <button class='salvar'>Salvar</button>
+        </div>
+
+    </div>
+</div>

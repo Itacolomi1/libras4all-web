@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - libras4All_web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="conteudo">
+        <ul class="menu">
+            <li><a href="Home">Home</a></li>
+            <li><a href="Salas">Salas</a></li>
+            <li><a href="Sala">Nova Sala</a></li>
+            <li><a href="Perfil">Perfil</a></li>
+            <li><a href="Alunos">Alunos</a></li>
+        </ul>
+        <!--<div class="container">-->
+            @*<main role="main" class="pb-3">
+
+            </main>*@
+        <!--</div>-->
+  
+        <div class="iframe">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+
+    </div>
+   
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - libras4All_web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

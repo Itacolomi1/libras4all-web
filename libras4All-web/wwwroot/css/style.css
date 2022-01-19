@@ -1,0 +1,420 @@
+ body,html{
+    height: 100%;
+    position: relative;
+    margin: 0;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+  }
+
+.menu{
+    background-color: rgb(35, 36, 95);
+    list-style: none;
+    width: 78px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.conteudo .iframe {
+    margin-left: 50px;
+    height: 100%;
+    width: 550px;
+    border: none;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0px 0px 14px #8888b9;
+}
+.conteudo .iframe main {
+    height: 100%;
+}
+.menu li{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding-right: 10px;
+}
+
+li.activo{
+    background: white;
+    border-radius: 25px 0px 0px 25px;
+   
+}
+li.activo a{
+color: rgb(35 36 95);
+}
+
+#home .salas_ativas {
+    height: 250px;
+    background: #a7caef;
+    margin: 15px;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+#nova_sala{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+    #nova_sala input, #salas input {
+        height: 30px;
+        margin-top: 50px;
+        width: 70%;
+        border: 1px solid #acacac;
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+
+#nova_sala .jogos, #home .jogos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 200px;
+}
+    #nova_sala .jogos div, #home .jogos div{
+        width: calc(95%/3);
+        height: 200px;
+        background-size: contain;
+    }
+.jogos .meteoro{
+    background-image: url("../images/meteoro.png");
+}
+
+.jogos .quiz {
+    background-image: url("../images/quiz.png");
+}
+
+.jogos .mestre {
+    background-image: url("../images/mestre.png");
+}
+
+#nova_sala button.salvar {
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: rgb(35 36 95);
+}
+#sala-editar button.salvar {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: rgb(35 36 95);
+}
+#nova_sala button.salvar:hover, #sala-editar button.salvar:hover {
+    color: white;
+    background: #037ca9;
+    border: none;
+}
+#salas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+    #salas button:hover {
+        color: white;
+        background: #037ca9;
+        border: none;
+    }
+    #salas button {
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+        color: white;
+        background: rgb(35 36 95);
+        margin-top: 50px;
+        margin-left: 10px;
+        width: 100px;
+    }
+#divTabela{
+    width: 90%;
+    margin-top: 20px;
+}
+tr {
+    font-size: 13px;
+}
+.button_editar {
+    background-image: url("../images/editar.png");
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.button_visualizar {
+    background-image: url("../images/visualizar.png");
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+    .button_visualizar a, .button_editar a {
+        width: 28px;
+        height: 28px;
+        display: block;
+    }
+    .button_excluir {
+        background-image: url("../images/excluir.png");
+        width: 28px;
+        height: 28px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+.engloba {
+position: relative;
+width: 100%;
+height: 100%;
+}
+#sala-editar, #perfil {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+#sala-visualizar, #alunos {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+    #sala-visualizar h1, #sala-editar h1, #alunos h1{
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        width: 100%;
+    }
+#sala-editar h2 {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+#sala-editar .status {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#perfil label {
+    text-align: center;
+    width: 100%;
+}
+.codigo-sala {
+    border: dotted;
+    border-radius: 10px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    background: #037ca9;
+}
+p, label {
+    font-size: 13px;
+}
+    p span {
+    font-weight: bold;
+    }
+.codigo-sala p{
+    font-weight: bold;
+    margin: 0px;
+}
+#sala-visualizar .esquerda, #alunos .esquerda{
+    background: red;
+    width: 40%;
+    margin: 10px;
+    padding: 5px;
+}
+#sala-visualizar .direita, #alunos .direita{
+    background: blue;
+    width: 40%;
+    margin: 10px;
+    padding: 5px;
+}
+#modal_quiz {
+    position: absolute;
+    background: rgb(35 36 95);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    display: none;
+}
+#modal_quiz h1{
+    color: white;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+#modal_quiz #nova_pergunta, #modal_quiz #historia, #modal_quiz #numerais, #modal_quiz #saudacoes,#modal_quiz #alfabeto, #modal_quiz #customizadas{
+    background: white;
+    width: calc(90%/3);
+    height: 75px;
+    margin-top: 10px;
+    color: rgb(35 36 95) ;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#modal_quiz .topicos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#modal_quiz .topicos button{
+    color: white;
+    background: rgb(35, 36, 95);
+    border: none;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+}
+#modal_quiz button.salvar{
+    width: 100%;
+    background: white;
+    color: rgb(35, 36, 95);
+    margin: 10px;
+}
+#duvida_meteoro, #duvida_mestre{
+    position: absolute;
+    background: rgb(35 36 95 / 98%);
+    height: 80%;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    display: none;
+}
+#duvida_meteoro.show, #duvida_mestre.show{
+    display: block !important;
+}
+#duvida_meteoro p, #duvida_mestre p{
+    margin: 23px;
+    line-height: 23px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 15px;
+}
+
+#duvida_meteoro button, #duvida_mestre button{
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 24px;
+    right: 10px;
+    position: absolute;
+    top: 10px;
+}
+#duvida_meteoro .explicacao, #duvida_mestre .explicacao{
+    margin-top: 50px;
+}
+#cadatsrar_pergunta{
+    width: 60%;
+}
+#cadastrar_pergunta h1{
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: none;
+}
+#cadastrar_pergunta .pergunta{
+    display: flex;
+}
+#cadastrar_pergunta input{
+    margin-top: 5px;
+    width: 100%;
+}
+#cadastrar_pergunta #primeira, #cadastrar_pergunta #segunda, #cadastrar_pergunta #terceira{
+
+ width: 15px;
+}
+#cadastrar_pergunta span{
+    font-size: 13px;
+    margin-bottom: 0;
+    background: yellow;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    padding: 2px;
+    margin-top: 10px;
+    display: block;
+}
+#modal_quiz #nova_pergunta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
