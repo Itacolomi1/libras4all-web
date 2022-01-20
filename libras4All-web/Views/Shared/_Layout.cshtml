@@ -4,11 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - libras4All_web</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/css/style.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="fundo_modal"></div>
     <div class="conteudo">
         <ul class="menu">
             <li><a href="Home">Home</a></li>
@@ -18,11 +22,11 @@
             <li><a href="Alunos">Alunos</a></li>
         </ul>
         <!--<div class="container">-->
-            @*<main role="main" class="pb-3">
+        @*<main role="main" class="pb-3">
 
             </main>*@
         <!--</div>-->
-  
+
         <div class="iframe">
             <main role="main" class="pb-3">
                 @RenderBody()
@@ -31,7 +35,7 @@
 
 
     </div>
-   
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
