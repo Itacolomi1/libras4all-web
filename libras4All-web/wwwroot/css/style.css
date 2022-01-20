@@ -109,19 +109,33 @@ color: rgb(35 36 95);
         height: 200px;
         background-size: contain;
     }
-.jogos .meteoro{
-    background-image: url("../images/meteoro.png");
+#nova_sala .jogos .meteoro {
+        background-image: url("../images/meteoro.png");
+        position: relative;
+    }
+#home .jogos .meteoro {
+    background-image: url("../images/meteoro-home.png");
 }
-
+.abrir_duvida_meteoro, .abrir_duvida_mestre {
+    height: 50px !important;
+    width: 50px !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 .jogos .quiz {
     background-image: url("../images/quiz.png");
 }
 
-.jogos .mestre {
+#nova_sala .jogos .mestre {
     background-image: url("../images/mestre.png");
+    position: relative;
+}
+#home .jogos .mestre {
+    background-image: url("../images/mestre-home.png");
 }
 
-#nova_sala button.salvar {
+ button.salvar {
     width: 70%;
     height: 30px;
     border: none;
@@ -134,7 +148,7 @@ color: rgb(35 36 95);
     color: white;
     background: rgb(35 36 95);
 }
-#sala-editar button.salvar {
+#sala-editar button.salvar, #perfil button.salvar {
     width: 100%;
     height: 30px;
     border: none;
@@ -147,22 +161,18 @@ color: rgb(35 36 95);
     color: white;
     background: rgb(35 36 95);
 }
-#nova_sala button.salvar:hover, #sala-editar button.salvar:hover {
-    color: white;
-    background: #037ca9;
-    border: none;
-}
+    button.salvar:hover, #sala-editar button.salvar:hover, .img-perfil:hover, #salas button:hover, #perfil button.salvar:hover {
+        color: white;
+        background: #037ca9;
+        border: none;
+    }
 #salas{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-    #salas button:hover {
-        color: white;
-        background: #037ca9;
-        border: none;
-    }
+   
     #salas button {
         height: 30px;
         border: none;
@@ -185,6 +195,47 @@ color: rgb(35 36 95);
 tr {
     font-size: 13px;
 }
+input-search {
+    border: 1px solid #CCC;
+    padding: 5px 14px;
+    font-size: 12px;
+    margin: 10px 0;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.input-search::-webkit-input-placeholder {
+    font-style: italic
+}
+
+.input-search:-moz-placeholder {
+    font-style: italic
+}
+
+.input-search:-ms-input-placeholder {
+    font-style: italic
+}
+
+/* " Para a tabela */
+table.tabelaSala {
+    border-collapse: collapse;
+    font-size: 11px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+    table.tabelaSala th {
+        padding: 5px;
+        background: #EEE;
+        border: 1px solid #CCC;
+    }
+
+    table.tabelaSala td {
+        padding: 3px;
+        border: 1px solid #CCC;
+    }   
 .button_editar {
     background-image: url("../images/editar.png");
     width: 28px;
@@ -216,7 +267,7 @@ position: relative;
 width: 100%;
 height: 100%;
 }
-#sala-editar, #perfil {
+#sala-editar {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -224,7 +275,20 @@ height: 100%;
     left: 0;
     margin: auto;
     width: 300px;
-    height: 300px;
+    height: 420px;
+}
+  #perfil {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 300px;
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #sala-visualizar, #alunos {
     margin-top: 50px;
@@ -253,7 +317,12 @@ height: 100%;
 }
 #perfil label {
     text-align: center;
-    width: 100%;
+}
+#perfil span {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: system-ui;
+    padding-right: 10px;
 }
 .codigo-sala {
     border: dotted;
@@ -287,10 +356,136 @@ p, label {
     padding: 5px;
 }
 #sala-visualizar .direita, #alunos .direita{
-    background: blue;
-    width: 40%;
+    width: 50%;
+    height: 100%;
     margin: 10px;
     padding: 5px;
+}
+#login, #cadastro {
+    background: white;
+    height: 100%;
+    width: 100%;
+}
+.square button {
+    width: 51%;
+    height: 30px;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background: white;
+    color: rgb(35, 36, 95);
+    margin-bottom: 25px;
+}
+.square div, #perfil .separa {
+    width: 100%;
+    text-align: center;
+}
+    .square button:hover {
+        color: white;
+        background: #037ca9;
+    }
+.square h1 {
+    color: white;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+.square input {
+    width: 51%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 32px;
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+.user-icon {
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 5px;
+    background-position-y: 5px;
+}
+#imagem img {
+    width: auto;
+    height: 100%;
+}
+#teste {
+display: none;
+}
+.img-perfil {
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: rgb(35 36 95);
+
+}
+#imagem {
+    border: none;
+    text-align : center;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position-x: 24px;
+    background-position-y: 24px;
+    background-size: 70px;
+}
+.email-icon {
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 5px;
+    background-position-y: 5px;
+}
+.senha-icon {
+    background-image: url(../images/cadeado.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 5px;
+    background-position-y: 5px;
+}
+.square p {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.square {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 550px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    box-shadow: 0px 0px 14px #131349;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgb(35, 36, 95);
+    margin: auto;
+}
+.fundo_modal{
+    background: #212529e6;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
 }
 #modal_quiz {
     position: absolute;
@@ -306,7 +501,18 @@ p, label {
     color: white;
     border-radius: 20px;
     display: none;
+    z-index: 2;
 }
+    #modal_quiz .fechar {
+        background: none;
+        border: none;
+        color: white;
+        font-weight: bolder;
+        font-size: 24px;
+        right: 10px;
+        position: absolute;
+        top: 10px;
+    }
 #modal_quiz h1{
     color: white;
     text-transform: uppercase;
@@ -342,7 +548,7 @@ p, label {
     color: rgb(35, 36, 95);
     margin: 10px;
 }
-#duvida_meteoro, #duvida_mestre{
+#duvida_meteoro, #duvida_mestre {
     position: absolute;
     background: rgb(35 36 95 / 98%);
     height: 80%;
@@ -356,6 +562,7 @@ p, label {
     color: white;
     border-radius: 20px;
     display: none;
+    z-index: 2;
 }
 #duvida_meteoro.show, #duvida_mestre.show{
     display: block !important;
@@ -380,8 +587,9 @@ p, label {
 #duvida_meteoro .explicacao, #duvida_mestre .explicacao{
     margin-top: 50px;
 }
-#cadatsrar_pergunta{
+#modal_quiz #cadastrar_pergunta {
     width: 60%;
+    display: none;
 }
 #cadastrar_pergunta h1{
     color: white;
