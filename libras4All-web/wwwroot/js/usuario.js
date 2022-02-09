@@ -16,7 +16,7 @@
         .done(function (data) {
             localStorage.setItem('user_token', JSON.stringify(data.token));
             console.log('a token � ' + JSON.parse(localStorage.getItem('user_token')));
-            //window.location = "https://libras4all-web.herokuapp.com/Home"
+            window.location = "https://libras4all-web.herokuapp.com/Home"
             console.log(data);
 
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {

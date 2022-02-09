@@ -14,7 +14,7 @@ function cadastrarUsuario() {
     })
         .done(function (data) {
             alert("Usuário cadastrado com sucesso");
-            window.location.href = "https://libras4all-web.herokuapp.com/Login"; // não está redirecionando
+            window.location = "https://libras4all-web.herokuapp.com/Login"; // não está redirecionando
 
         })
 
