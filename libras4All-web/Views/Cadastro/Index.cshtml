@@ -4,26 +4,28 @@
 @{
     Layout = null;
 }
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - libras4All_web</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link href="~/css/style.css" rel="stylesheet" />
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - libras4All_web</title>
+        <script src="JS/cadastro.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/css/style.css" rel="stylesheet" />
+    </head>
 <div id='cadastro'>
     <div class="square">
         <h1>Cadastro</h1>
         <div>
-            <input type="text" class="user-icon" placeholder="Nome" />
-            <input type="text" class="email-icon" placeholder="Email" />
-            <input type="password" class="senha-icon" placeholder="Senha" />
+            <input type="text" class="user-icon" id="exampleDropdownFormNome1" placeholder="Nome" />
+            <input type="text" class="email-icon" id="exampleDropdownFormEmail1" placeholder="Email" />
+            <input type="password" class="senha-icon" id="exampleDropdownFormPassword1" placeholder="Senha" />
         </div>
         <div>
-            <button>Cadastrar</button>
+            <button onclick="cadastrarUsuario()" type="button">Cadastrar</button>
         </div>
     </div>
       
