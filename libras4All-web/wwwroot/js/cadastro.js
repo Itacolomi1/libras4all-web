@@ -1,24 +1,22 @@
 function cadastrarUsuario() {
-    var url = "https://libras4all.herokuapp.com/api/usuario/criar";
-    //var url = "http://localhost:9090/api/usuario/criar";
+    var url = "https://libras4all.herokuapp.com/api/professor";
+    var nome = $('#exampleDropdownFormNome1').val();
+    var email = $('#exampleDropdownFormEmail1').val();
+    var senha = $('#exampleDropdownFormPassword1').val();
 
-    var nomeUsuario = $('#exampleDropdownFormNome1').val();
-    var loginUsuario = $('#exampleDropdownFormEmail1').val();
-    var senhaUsuario = $('#exampleDropdownFormPassword1').val();
-   
+    debugger;
     $.ajax({
         type: "POST",
         url: url,
-        data: { nome: nomeUsuario, email: loginUsuario, password: senhaUsuario },
+        data: { nome: nome, email: email, senha: senha },
         cache: false
     })
         .done(function (data) {
             alert("Usuário cadastrado com sucesso");
-            window.location = "https://libras4all-web.herokuapp.com/Login"; // não está redirecionando
-
+            window.location = "https://libras4all-web.herokuapp.com/Login";
         })
-
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
             console.log(errorThrown);
+            alert("Erro ao cadastrar usuário.");
         });
 }
