@@ -1,5 +1,6 @@
 function cadastrarUsuario() {
-    var url = "https://libras4all.herokuapp.com/api/usuario/criar";
+    
+    var url = "https://libras4all.herokuapp.com/api/professor";
     //var url = "http://localhost:9090/api/usuario/criar";
 
     var nomeUsuario = $('#exampleDropdownFormNome1').val();
@@ -9,7 +10,7 @@ function cadastrarUsuario() {
     $.ajax({
         type: "POST",
         url: url,
-        data: { nome: nomeUsuario, email: loginUsuario, password: senhaUsuario },
+        data: { nome: nomeUsuario, email: loginUsuario, senha: senhaUsuario },
         cache: false
     })
         .done(function (data) {
