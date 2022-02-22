@@ -5,7 +5,7 @@
     var usuario = {};
     usuario.email = $('#email_user').val();
     usuario.senha = $('#password_user').val();
-  
+    
     $.ajax({
         type: "POST",
         url: url,
@@ -14,10 +14,11 @@
     })
         .done(function (data) {
             localStorage.setItem('user_token', JSON.stringify(data.token));
-            console.log('a token � ' + JSON.parse(localStorage.getItem('user_token')));
+            localStorage.setItem('user_id', JSON.stringify(data._id));
             
+           
             window.location = "https://libras4all-web.herokuapp.com/Home"
-            console.log(data);
+
 
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Usuário ou Senha inválido");
@@ -26,3 +27,4 @@
 
 
 }
+
