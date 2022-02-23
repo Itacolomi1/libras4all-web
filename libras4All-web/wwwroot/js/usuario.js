@@ -1,5 +1,6 @@
 ﻿var urlProfessor = "https://libras4all.herokuapp.com/api/professor";
-var urlWeb = "https://libras4all-web.herokuapp.com";
+//var urlWeb = "https://libras4all-web.herokuapp.com";
+var urlWeb = "https://localhost:44319";
 
 function logarUsuario() {
     var usuario = {};

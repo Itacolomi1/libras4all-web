@@ -32,7 +32,7 @@
             {
                 data: function (data, type, row) {
                     var strStatus;
-                    if (data.status == 0)
+                    if (data.status == "false")
                         strStatus = 'Inativa'
                     else
                         strStatus = 'Ativa'
@@ -46,7 +46,7 @@
                         '<img class="btnVisualizar" style="width: 30px;" src="./images/visualizar.png"></img>' +
                         '</a> ' +
                         '<a href="Editar?Id=' + data._id + '">' +
-                        '<img class="btnVisualizar" style="width: 30px;" src="./images/editar.png"></img>' +
+                        '<img style="width: 30px;" src="./images/editar.png"></img>' +
                         '</a> ' +
                         '<a href="Excluir?Id=' + data._id + '">' +
                         '<img class="btnVisualizar" style="width: 30px;" src="./images/excluir.png"></img>' +
