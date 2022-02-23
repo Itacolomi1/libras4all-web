@@ -4,29 +4,29 @@
 @{
     Layout = null;
 }
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>@ViewData["Title"] - libras4All_web</title>
-        <script src="JS/loginProfessor.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link href="~/css/style.css" rel="stylesheet" />
-    </head>
-<div id='login'>
-    <div class="square">
-        <h1>Login</h1>
-        <div>
-            <input type="text" class="email-icon" id="email_user" placeholder="Email" />
-            <input type="password" class="senha-icon" id="password_user" placeholder="Senha" />
-        </div>
-        <div>
-            <button onclick="logarUsuario()">Entrar</button>
-            <button onclick="window.location.href='/Cadastro'">Cadastrar</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id='login'>
+        <div class="square">
+            <h1>Login</h1>
+            <div>
+                <input type="text" class="email-icon" id="email_user" placeholder="Email" />
+                <input type="password" class="senha-icon" id="password_user" placeholder="Senha" />
+            </div>
+            <div>
+                <button onclick="logarUsuario()">Entrar</button>
+                <button onclick="window.location.href='/Cadastro'">Cadastrar</button>
+            </div>
         </div>
     </div>
-      
-</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="JS/usuario.js"></script>
+</body>
+</html>
