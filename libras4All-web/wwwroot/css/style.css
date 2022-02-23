@@ -76,15 +76,8 @@ li.activo {
     }
 
 #home .salas_ativas {
+    margin: 40px 40px 0px 40px;
     height: 250px;
-    background: #a7caef;
-    margin: 15px;
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
 }
 
 #nova_sala {

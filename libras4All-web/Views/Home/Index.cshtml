@@ -1,26 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html>
 
-<div id='home'>
-    <div class="salas_ativas">
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+</head>
 
-        <p>Salas Ativas</p>
-
+<body>
+    <div id='home'>
+        <div class="salas_ativas">
+            <h2><b>Salas Ativas</b></h2>
+            <table id="tbSalasAtivas" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Jogo</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="jogos">
+            <div class="quiz">
+            </div>
+            <div class="meteoro">
+            </div>
+            <div class="mestre">
+            </div>
+        </div>
     </div>
-    <div class="jogos">
-        <div class="quiz">
-
-        </div>
-        <div class="meteoro">
-
-        </div>
-        <div class="mestre">
-
-        </div>
-    </div>
-    
-   
-    
-   
-</div>
+    <script src="./js/home.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+</body>
+</html>

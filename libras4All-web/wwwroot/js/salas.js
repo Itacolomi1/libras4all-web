@@ -47,10 +47,7 @@
                         '</a> ' +
                         '<a href="Editar?Id=' + data._id + '">' +
                         '<img style="width: 30px;" src="./images/editar.png"></img>' +
-                        '</a> ' +
-                        '<a href="Excluir?Id=' + data._id + '">' +
-                        '<img class="btnVisualizar" style="width: 30px;" src="./images/excluir.png"></img>' +
-                        '</a> ';
+                        '</a> ' ;
                 }
             },
         ],
