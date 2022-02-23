@@ -1,12 +1,12 @@
- body,html{
+body, html {
     height: 100%;
     position: relative;
     margin: 0;
     font-family: "Open Sans", Sans-serif;
     font-size: 12px;
-  }
+}
 
-.menu{
+.menu {
     background-color: rgb(35, 36, 95);
     list-style: none;
     width: 78px;
@@ -19,15 +19,17 @@
     border-radius: 20px;
     padding-left: 10px;
 }
-.menu a{
-    text-decoration: none;
-    color: white;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.conteudo{
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+.conteudo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,19 +41,22 @@
     bottom: 0;
     margin: auto;
 }
-.conteudo .iframe {
-    margin-left: 50px;
-    height: 100%;
-    width: 550px;
-    border: none;
-    border-radius: 25px;
-    position: relative;
-    box-shadow: 0px 0px 14px #8888b9;
-}
-.conteudo .iframe main {
-    height: 100%;
-}
-.menu li{
+
+    .conteudo .iframe {
+        margin-left: 50px;
+        height: 100%;
+        width: 550px;
+        border: none;
+        border-radius: 25px;
+        position: relative;
+        box-shadow: 0px 0px 14px #8888b9;
+    }
+
+        .conteudo .iframe main {
+            height: 100%;
+        }
+
+.menu li {
     width: 100%;
     height: 50px;
     display: flex;
@@ -61,14 +66,14 @@
     padding-right: 10px;
 }
 
-li.activo{
+li.activo {
     background: white;
     border-radius: 25px 0px 0px 25px;
-   
 }
-li.activo a{
-color: rgb(35 36 95);
-}
+
+    li.activo a {
+        color: rgb(35 36 95);
+    }
 
 #home .salas_ativas {
     height: 250px;
@@ -81,7 +86,8 @@ color: rgb(35 36 95);
     align-items: center;
     font-size: 20px;
 }
-#nova_sala{
+
+#nova_sala {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -97,25 +103,29 @@ color: rgb(35 36 95);
         padding-left: 20px;
     }
 
-#nova_sala .jogos, #home .jogos{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 200px;
-}
-    #nova_sala .jogos div, #home .jogos div{
-        width: calc(95%/3);
+    #nova_sala .jogos, #home .jogos {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
         height: 200px;
-        background-size: contain;
     }
-#nova_sala .jogos .meteoro {
-        background-image: url("../images/meteoro.png");
-        position: relative;
-    }
-#home .jogos .meteoro {
-    background-image: url("../images/meteoro-home.png");
-}
+
+        #nova_sala .jogos div, #home .jogos div {
+            width: calc(95%/3);
+            height: 200px;
+            background-size: contain;
+        }
+
+        #nova_sala .jogos .meteoro {
+            background-image: url("../images/meteoro.png");
+            position: relative;
+        }
+
+        #home .jogos .meteoro {
+            background-image: url("../images/meteoro-home.png");
+        }
+
 .abrir_duvida_meteoro, .abrir_duvida_mestre {
     height: 50px !important;
     width: 50px !important;
@@ -123,6 +133,7 @@ color: rgb(35 36 95);
     bottom: 0;
     right: 0;
 }
+
 .jogos .quiz {
     background-image: url("../images/quiz.png");
 }
@@ -131,11 +142,12 @@ color: rgb(35 36 95);
     background-image: url("../images/mestre.png");
     position: relative;
 }
+
 #home .jogos .mestre {
     background-image: url("../images/mestre-home.png");
 }
 
- button.salvar {
+button.salvar {
     width: 70%;
     height: 30px;
     border: none;
@@ -148,6 +160,7 @@ color: rgb(35 36 95);
     color: white;
     background: rgb(35 36 95);
 }
+
 #sala-editar button.salvar, #perfil button.salvar {
     width: 100%;
     height: 30px;
@@ -161,18 +174,20 @@ color: rgb(35 36 95);
     color: white;
     background: rgb(35 36 95);
 }
+
     button.salvar:hover, #sala-editar button.salvar:hover, .img-perfil:hover, #salas button:hover, #perfil button.salvar:hover {
         color: white;
         background: #037ca9;
         border: none;
     }
-#salas{
+
+#salas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-   
+
     #salas button {
         height: 30px;
         border: none;
@@ -188,13 +203,16 @@ color: rgb(35 36 95);
         margin-left: 10px;
         width: 100px;
     }
-#divTabela{
+
+#divTabela {
     width: 90%;
     margin-top: 20px;
 }
+
 tr {
     font-size: 13px;
 }
+
 input-search {
     border: 1px solid #CCC;
     padding: 5px 14px;
@@ -235,38 +253,14 @@ table.tabelaSala {
     table.tabelaSala td {
         padding: 3px;
         border: 1px solid #CCC;
-    }   
-.button_editar {
-    background-image: url("../images/editar.png");
-    width: 28px;
-    height: 28px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.button_visualizar {
-    background-image: url("../images/visualizar.png");
-    width: 28px;
-    height: 28px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-    .button_visualizar a, .button_editar a {
-        width: 28px;
-        height: 28px;
-        display: block;
     }
-    .button_excluir {
-        background-image: url("../images/excluir.png");
-        width: 28px;
-        height: 28px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+
 .engloba {
-position: relative;
-width: 100%;
-height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
+
 #sala-editar {
     position: absolute;
     top: 0;
@@ -277,7 +271,8 @@ height: 100%;
     width: 300px;
     height: 420px;
 }
-  #perfil {
+
+#perfil {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -290,6 +285,7 @@ height: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 #sala-visualizar, #alunos {
     margin-top: 50px;
     margin-left: 20px;
@@ -299,31 +295,37 @@ height: 100%;
     align-items: center;
     justify-content: center;
 }
-    #sala-visualizar h1, #sala-editar h1, #alunos h1{
+
+    #sala-visualizar h1, #sala-editar h1, #alunos h1 {
         font-size: 20px;
         text-align: center;
         font-weight: bold;
         width: 100%;
     }
+
 #sala-editar h2 {
     font-size: 15px;
     text-align: center;
     font-weight: bold;
     width: 100%;
 }
+
 #sala-editar .status {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
 #perfil label {
     text-align: center;
 }
+
 #perfil span {
     font-size: 15px;
     font-weight: bold;
     font-family: system-ui;
     padding-right: 10px;
 }
+
 .codigo-sala {
     border: dotted;
     border-radius: 10px;
@@ -339,33 +341,40 @@ height: 100%;
     color: white;
     background: #037ca9;
 }
+
 p, label {
     font-size: 13px;
 }
+
     p span {
-    font-weight: bold;
+        font-weight: bold;
     }
-.codigo-sala p{
+
+.codigo-sala p {
     font-weight: bold;
     margin: 0px;
 }
-#sala-visualizar .esquerda, #alunos .esquerda{
+
+#sala-visualizar .esquerda, #alunos .esquerda {
     background: red;
     width: 40%;
     margin: 10px;
     padding: 5px;
 }
-#sala-visualizar .direita, #alunos .direita{
+
+#sala-visualizar .direita, #alunos .direita {
     width: 50%;
     height: 100%;
     margin: 10px;
     padding: 5px;
 }
+
 #login, #cadastro {
     background: white;
     height: 100%;
     width: 100%;
 }
+
 .square button {
     width: 51%;
     height: 30px;
@@ -379,14 +388,17 @@ p, label {
     color: rgb(35, 36, 95);
     margin-bottom: 25px;
 }
+
 .square div, #perfil .separa {
     width: 100%;
     text-align: center;
 }
-    .square button:hover {
-        color: white;
-        background: #037ca9;
-    }
+
+.square button:hover {
+    color: white;
+    background: #037ca9;
+}
+
 .square h1 {
     color: white;
     text-transform: uppercase;
@@ -394,6 +406,7 @@ p, label {
     text-align: center;
     width: 100%;
 }
+
 .square input {
     width: 51%;
     height: 30px;
@@ -403,6 +416,7 @@ p, label {
     font-size: 13px;
     margin-bottom: 50px;
 }
+
 .user-icon {
     background-image: url(../images/user.png);
     background-repeat: no-repeat;
@@ -410,13 +424,16 @@ p, label {
     background-position-x: 5px;
     background-position-y: 5px;
 }
+
 #imagem img {
     width: auto;
     height: 100%;
 }
+
 #teste {
-display: none;
+    display: none;
 }
+
 .img-perfil {
     width: 70%;
     height: 30px;
@@ -428,11 +445,11 @@ display: none;
     border: none;
     color: white;
     background: rgb(35 36 95);
-
 }
+
 #imagem {
     border: none;
-    text-align : center;
+    text-align: center;
     width: 120px;
     height: 120px;
     overflow: hidden;
@@ -442,6 +459,7 @@ display: none;
     background-position-y: 24px;
     background-size: 70px;
 }
+
 .email-icon {
     background-image: url(../images/email.png);
     background-repeat: no-repeat;
@@ -449,6 +467,7 @@ display: none;
     background-position-x: 5px;
     background-position-y: 5px;
 }
+
 .senha-icon {
     background-image: url(../images/cadeado.png);
     background-repeat: no-repeat;
@@ -456,11 +475,13 @@ display: none;
     background-position-x: 5px;
     background-position-y: 5px;
 }
+
 .square p {
     width: 100%;
     text-align: center;
     color: white;
 }
+
 .square {
     display: flex;
     flex-wrap: wrap;
@@ -479,7 +500,8 @@ display: none;
     background: rgb(35, 36, 95);
     margin: auto;
 }
-.fundo_modal{
+
+.fundo_modal {
     background: #212529e6;
     display: none;
     width: 100%;
@@ -487,6 +509,7 @@ display: none;
     position: absolute;
     z-index: 1;
 }
+
 #modal_quiz {
     position: absolute;
     background: rgb(35 36 95);
@@ -503,6 +526,7 @@ display: none;
     display: none;
     z-index: 2;
 }
+
     #modal_quiz .fechar {
         background: none;
         border: none;
@@ -513,41 +537,47 @@ display: none;
         position: absolute;
         top: 10px;
     }
-#modal_quiz h1{
-    color: white;
-    text-transform: uppercase;
-    margin-top: 30px;
-}
-#modal_quiz #nova_pergunta, #modal_quiz #historia, #modal_quiz #numerais, #modal_quiz #saudacoes,#modal_quiz #alfabeto, #modal_quiz #customizadas{
-    background: white;
-    width: calc(90%/3);
-    height: 75px;
-    margin-top: 10px;
-    color: rgb(35 36 95) ;
-    text-transform: uppercase;
-    border-radius: 10px;
-    font-weight: bold;
-}
-#modal_quiz .topicos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#modal_quiz .topicos button{
-    color: white;
-    background: rgb(35, 36, 95);
-    border: none;
-    font-weight: bold;
-    width: 25px;
-    height: 25px;
-}
-#modal_quiz button.salvar{
-    width: 100%;
-    background: white;
-    color: rgb(35, 36, 95);
-    margin: 10px;
-}
+
+    #modal_quiz h1 {
+        color: white;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+
+    #modal_quiz #nova_pergunta, #modal_quiz #historia, #modal_quiz #numerais, #modal_quiz #saudacoes, #modal_quiz #alfabeto, #modal_quiz #customizadas {
+        background: white;
+        width: calc(90%/3);
+        height: 75px;
+        margin-top: 10px;
+        color: rgb(35 36 95);
+        text-transform: uppercase;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    #modal_quiz .topicos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+        #modal_quiz .topicos button {
+            color: white;
+            background: rgb(35, 36, 95);
+            border: none;
+            font-weight: bold;
+            width: 25px;
+            height: 25px;
+        }
+
+    #modal_quiz button.salvar {
+        width: 100%;
+        background: white;
+        color: rgb(35, 36, 95);
+        margin: 10px;
+    }
+
 #duvida_meteoro, #duvida_mestre {
     position: absolute;
     background: rgb(35 36 95 / 98%);
@@ -564,52 +594,60 @@ display: none;
     display: none;
     z-index: 2;
 }
-#duvida_meteoro.show, #duvida_mestre.show{
-    display: block !important;
-}
-#duvida_meteoro p, #duvida_mestre p{
-    margin: 23px;
-    line-height: 23px;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 15px;
-}
 
-#duvida_meteoro button, #duvida_mestre button{
-    background: none;
-    border: none;
-    color: white;
-    font-weight: bolder;
-    font-size: 24px;
-    right: 10px;
-    position: absolute;
-    top: 10px;
-}
-#duvida_meteoro .explicacao, #duvida_mestre .explicacao{
-    margin-top: 50px;
-}
+    #duvida_meteoro.show, #duvida_mestre.show {
+        display: block !important;
+    }
+
+    #duvida_meteoro p, #duvida_mestre p {
+        margin: 23px;
+        line-height: 23px;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 15px;
+    }
+
+    #duvida_meteoro button, #duvida_mestre button {
+        background: none;
+        border: none;
+        color: white;
+        font-weight: bolder;
+        font-size: 24px;
+        right: 10px;
+        position: absolute;
+        top: 10px;
+    }
+
+    #duvida_meteoro .explicacao, #duvida_mestre .explicacao {
+        margin-top: 50px;
+    }
+
 #modal_quiz #cadastrar_pergunta {
     width: 60%;
     display: none;
 }
-#cadastrar_pergunta h1{
+
+#cadastrar_pergunta h1 {
     color: white;
     margin-top: 30px;
     font-size: 20px;
     font-weight: bold;
     text-transform: none;
 }
-#cadastrar_pergunta .pergunta{
+
+#cadastrar_pergunta .pergunta {
     display: flex;
 }
-#cadastrar_pergunta input{
+
+#cadastrar_pergunta input {
     margin-top: 5px;
     width: 100%;
 }
-#cadastrar_pergunta #primeira, #cadastrar_pergunta #segunda, #cadastrar_pergunta #terceira{
 
- width: 15px;
+#cadastrar_pergunta #primeira, #cadastrar_pergunta #segunda, #cadastrar_pergunta #terceira {
+    width: 15px;
 }
-#cadastrar_pergunta span{
+
+#cadastrar_pergunta span {
     font-size: 13px;
     margin-bottom: 0;
     background: yellow;
@@ -620,7 +658,8 @@ display: none;
     margin-top: 10px;
     display: block;
 }
-#modal_quiz #nova_pergunta{
+
+#modal_quiz #nova_pergunta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
