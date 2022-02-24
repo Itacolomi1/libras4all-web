@@ -1,37 +1,49 @@
 ﻿
 
-<script src="JS/listaAlunos.js"></script>
+    <div id='alunos'>
+        <div class="esquerda">
+            <p>Alunos</p>
+            @*<button onclick="CarregaDados()" type="button">TESTE</button>*@
+            <table id="tabelaAlunos" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
 
-
-<div id='alunos'>
-    <div class="esquerda">
-        <p>Alunos</p>
-        <table id="tabelaAlunos" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tfoot>
-        </table>
-
-    </div>
-    <div class="direita">
-        <div class="cima">
-            <p>Salas</p>
         </div>
-        <div class="baixo">
-            <p>% de acerto do Aluno</p>
-            <canvas id="primeiroGrafico"></canvas>
-        </div>
+        <div class="direita">
+            <div class="cima">
+                <p>Salas</p>
+                <table id="tabelaSalas" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
 
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="baixo">
+                <p>% de acerto do Aluno</p>
+                <canvas id="primeiroGrafico"></canvas>
+            </div>
+        </div>
     </div>
 
-</div>
-
+    <script src="./js/listaAlunos.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
