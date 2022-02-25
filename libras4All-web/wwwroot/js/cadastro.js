@@ -3,8 +3,6 @@ function cadastrarUsuario() {
     var nome = $('#exampleDropdownFormNome1').val();
     var email = $('#exampleDropdownFormEmail1').val();
     var senha = $('#exampleDropdownFormPassword1').val();
-
-    debugger;
     $.ajax({
         type: "POST",
         url: url,

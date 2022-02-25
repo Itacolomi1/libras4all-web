@@ -13,8 +13,8 @@
         .done(function (data) {
             localStorage.setItem('user_token', JSON.stringify(data.token));
             localStorage.setItem('user_id', JSON.stringify(data._id));         
-            window.location = "https://libras4all-web.herokuapp.com/Home"
-
+            window.location = "https://libras4all-web.herokuapp.com/Home";
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Usuário ou Senha inválido");
         });
+    }
