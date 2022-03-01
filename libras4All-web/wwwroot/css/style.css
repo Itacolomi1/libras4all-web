@@ -345,20 +345,6 @@ p, label {
     margin: 0px;
 }
 
-#sala-visualizar .esquerda, #alunos .esquerda {
-    background: red;
-    width: 40%;
-    margin: 10px;
-    padding: 5px;
-}
-
-#sala-visualizar .direita, #alunos .direita {
-    width: 50%;
-    height: 100%;
-    margin: 10px;
-    padding: 5px;
-}
-
 #login, #cadastro {
     background: white;
     height: 100%;
@@ -664,4 +650,18 @@ p, label {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+#sala-visualizar .esquerda, #alunos .esquerda {
+    width: 45%;
+    height: 100%;
+    margin: 10px;
+    padding: 5px;
+}
+
+#sala-visualizar .direita, #alunos .direita {
+    width: 45%;
+    height: 100%;
+    margin: 10px;
+    padding: 5px;
 }

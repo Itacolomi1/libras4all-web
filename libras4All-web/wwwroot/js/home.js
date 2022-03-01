@@ -25,6 +25,7 @@ $(document).ready(function () {
                         "previous": "Anterior",
                         "next": "Próximo"
                     },
+                    "emptyTable": "Sem dados",
                     "search": "Pesquisar: ",
                     "info": "_PAGE_ de _PAGES_"
                 },
