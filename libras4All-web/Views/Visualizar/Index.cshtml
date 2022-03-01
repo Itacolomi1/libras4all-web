@@ -3,32 +3,54 @@
 *@
 @{
 }
-<div id='sala-visualizar'>
-    <h1>Nome da Sala</h1>
+<!DOCTYPE html>
+<html>
 
-    <div class="esquerda">
-        <p>Ranking</p>
-        <table id="tabelaRanking" class="display" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th>Email</th>
-                    <th>Posição</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <td>teste</td>
-                    <td>1º</td>
-                </tr>
-            </tfoot>
-        </table>
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+</head>
 
+<body>
+    <div id='sala-visualizar'>
+        <h1 id="txtSala"></h1>
+
+        <div class="esquerda">
+            <h3>Ranking</h3>
+            <table id="tabelaRanking" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Pontuação</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="direita">
+            <h3>Jogo</h3>
+            <table id="tabelaItens" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <canvas id="graficoItens" style="width:100%;max-width:600px"></canvas>
+        </div>
     </div>
-    <div class="direita">
-        <p>Jogo</p>
-        <p>% de acerto da Sala</p>
-        <canvas id="primeiroGrafico"></canvas>
+    <script src="./js/visualizarSala.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</body>
+</html>
 
-    </div>
-   
-</div>

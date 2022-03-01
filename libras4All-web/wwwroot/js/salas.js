@@ -15,6 +15,7 @@
                 "previous": "Anterior",
                 "next": "Próximo"
             },
+            "emptyTable": "Sem dados",
             "search": "Pesquisar: ",
             "info": "_PAGE_ de _PAGES_"
         },
@@ -32,17 +33,17 @@
             {
                 data: function (data, type, row) {
                     var strStatus;
-                    if (data.status == "false")
-                        strStatus = 'Inativa'
-                    else
+                    if (data.status)
                         strStatus = 'Ativa'
+                    else
+                        strStatus = 'Inativa'
                     return strStatus;
                 }
             },
             { data: "tipoJogo" },
             {
                 data: function (data, type, row) {
-                    return '<a href="Editar?Id=' + data._id + '">' +
+                    return '<a href="Visualizar?Id=' + data._id + '">' +
                         '<img class="btnVisualizar" style="width: 30px;" src="./images/visualizar.png"></img>' +
                         '</a> ' +
                         '<a href="Editar?Id=' + data._id + '">' +

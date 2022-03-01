@@ -268,7 +268,17 @@ function cadastrarPergunta() {
             cache: false
         })
             .done(function (data) {
-                quantidadePerguntas[4] = quantidadePerguntas[4] + 1;
+                quantidadePerguntas[4] = quantidadePerguntas[4] + 1;              
+  
+                document.getElementById('txtDescricaoPergunta').value = '';
+                document.getElementById('txtPrimeiraAlternativa').value = '';
+                document.getElementById('txtSegundaAlternativa').value = '';
+                document.getElementById('txtTerceiraAlternativa').value = '';
+
+                document.getElementById('primeira').checked = false;
+                document.getElementById('segunda').checked = false;
+                document.getElementById('terceira').checked = false;
+
                 alert("Pergunta cadastrada com sucesso!");
             }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
                 alert("Erro ao cadastrar a pergunta!");
