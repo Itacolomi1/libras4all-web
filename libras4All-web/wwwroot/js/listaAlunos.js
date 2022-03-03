@@ -1,49 +1,47 @@
 ﻿var array = [];
 
 async function AdicionaLista(alunos, token) {
-    
-    
-    var url = "https://libras4all.herokuapp.com/api/usuario/";    
+
+    var url = "https://libras4all.herokuapp.com/api/usuario/";
     for (i = 0; i < alunos.length; i++) {
 
         var _id = JSON.stringify(alunos[i]).replaceAll('"', "");
         var url2 = url + _id;
-       await $.ajax({
+        await $.ajax({
             type: "GET",
             url: url2,
             dataType: "json",
             headers: {
-            authorization: 'bearer ' + token
-        },
+                authorization: 'bearer ' + token
+            },
             success: function (retorno) {
-                
+
                 array.push(retorno);
-                
+
             },
             error: function () {
-                console.log("Ocorreu um erro");               
+                console.log("Ocorreu um erro");
             }
 
-        });       
-        
+        });
+
     }
-    console.log(array);
-    debugger;
-    return array;
+   
+    montaTabela();
 }
 
 
+async function CarregaDados() {
 
-function CarregaDados() {
+    var token = localStorage.getItem('user_token').replaceAll("\"", "");
+    var id = localStorage.getItem('user_id').replaceAll("\"", "");
+    //var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWJlOWI4MmQ1M2EzMDAxNmEwYjU2ZSIsImlhdCI6MTY0NjMzNTYwNH0.zo-YM5pZn7WugFNNeSsm28TsW1Df1jmWO9Rs7LCQT7Y';
+    //var id = '621be9b82d53a30016a0b56e';
 
-   //var token = localStorage.getItem('user_token').replaceAll("\"", "");
-   //var id = localStorage.getItem('user_id').replaceAll("\"", 
-    var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMTY5NTUxMGJhNWFkMDAxNjRhNThkOCIsImlhdCI6MTY0NTc0NjIwOH0.ewZRHrQ1iq8B2MtPJ7m7ukRfFNEHJBSdViUc7jbBVlI';
-    var id = '621695510ba5ad00164a58d8';
-    
     var url = "https://libras4all.herokuapp.com/api/usuario/obterAlunosPorProfessor/" + id;
 
-    $.ajax({
+
+    await $.ajax({
         type: "GET",
         url: url,
         headers: {
@@ -51,16 +49,15 @@ function CarregaDados() {
         },
         success: function (retorno) {
 
-           
-            AdicionaLista(retorno,token);
-           
+            AdicionaLista(retorno, token);
 
-            // PEGAR ID DA MALU E TESTAR CRIAR A TABELA FORA PORQUE AQUI TA DANDO PROBLEMA DE SINCRONISMO
-           
         }
-    });
+    });  
 
-    $('#tabelaAlunos').DataTable({
+}
+
+async function montaTabela() {
+    await $('#tabelaAlunos').DataTable({
         dom: "Bfrtip",
         data: array,
         columns: [
@@ -70,3 +67,8 @@ function CarregaDados() {
     });
 }
 
+$(document).ready(function () {
+
+    CarregaDados();
+   
+});
