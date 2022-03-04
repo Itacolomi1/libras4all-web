@@ -62,10 +62,7 @@ async function CarregaDados() {
 
     var token = localStorage.getItem('user_token').replaceAll("\"", "");
 
-
-
     var url = "https://libras4all.herokuapp.com/api/usuario/obterAlunosPorProfessor/" + id;
-
 
     await $.ajax({
         type: "GET",
