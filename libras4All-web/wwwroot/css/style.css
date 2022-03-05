@@ -4,16 +4,19 @@ body, html {
     margin: 0;
     font-family: "Open Sans", Sans-serif;
     font-size: 12px;
-  }
+}
+
 #alunos .esquerda p {
     font-weight: bold;
     font-size: 20px;
 }
+
 #tabelaAlunos_wrapper {
     height: 75%;
     overflow-x: hidden;
     padding-right: 5px;
 }
+
 .menu {
     background-color: rgb(35, 36, 95);
     list-style: none;
@@ -84,8 +87,15 @@ li.activo {
     }
 
 #home .salas_ativas {
-    margin: 40px 40px 0px 40px;
     height: 250px;
+    background: #a7caef;
+    margin: 15px;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
 
 #nova_sala {
@@ -95,39 +105,37 @@ li.activo {
     height: 100%;
 }
 
-.btnJogos {
-    border: white;
-    height: 200px;
-    width: 150px;
-}
+    #nova_sala input, #salas input {
+        height: 30px;
+        margin-top: 50px;
+        width: 70%;
+        border: 1px solid #acacac;
+        border-radius: 10px;
+        padding-left: 20px;
+    }
 
-
-#nova_sala input, #salas input {
-    height: 30px;
-    margin-top: 50px;
-    width: 70%;
-    border: 1px solid #acacac;
-    border-radius: 10px;
-    padding-left: 20px;
-}
-
-#nova_sala .jogos, #home .jogos {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 200px;
-}
-
-    #nova_sala .jogos div, #home .jogos div {
-        width: calc(95%/3);
+    #nova_sala .jogos, #home .jogos {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
         height: 200px;
-        background-size: contain;
     }
 
-    #home .jogos .meteoro {
-        background-image: url("../images/meteoro-home.png");
-    }
+        #nova_sala .jogos div, #home .jogos div {
+            width: calc(95%/3);
+            height: 200px;
+            background-size: contain;
+        }
+
+        #nova_sala .jogos .meteoro {
+            background-image: url("../images/meteoro.png");
+            position: relative;
+        }
+
+        #home .jogos .meteoro {
+            background-image: url("../images/meteoro-home.png");
+        }
 
 .abrir_duvida_meteoro, .abrir_duvida_mestre {
     height: 50px !important;
@@ -139,6 +147,11 @@ li.activo {
 
 .jogos .quiz {
     background-image: url("../images/quiz.png");
+}
+
+#nova_sala .jogos .mestre {
+    background-image: url("../images/mestre.png");
+    position: relative;
 }
 
 #home .jogos .mestre {
@@ -253,6 +266,36 @@ table.tabelaSala {
         border: 1px solid #CCC;
     }
 
+.button_editar {
+    background-image: url("../images/editar.png");
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.button_visualizar {
+    background-image: url("../images/visualizar.png");
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+    .button_visualizar a, .button_editar a {
+        width: 28px;
+        height: 28px;
+        display: block;
+    }
+
+.button_excluir {
+    background-image: url("../images/excluir.png");
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .engloba {
     position: relative;
     width: 100%;
@@ -283,7 +326,8 @@ table.tabelaSala {
     flex-wrap: wrap;
     justify-content: center;
 }
-#sala-visualizar{
+
+#sala-visualizar {
     margin-top: 50px;
     margin-left: 20px;
     margin-right: 20px;
@@ -292,12 +336,15 @@ table.tabelaSala {
     align-items: center;
     justify-content: center;
 }
+
 #alunos .baixo {
     width: 44%;
 }
+
 #alunos .cima {
     width: 100%;
 }
+
 #alunos {
     margin-top: 20px;
     margin-left: 10px;
@@ -307,12 +354,14 @@ table.tabelaSala {
     justify-content: center;
     height: 100%;
 }
-#sala-visualizar h1, #sala-editar h1, #alunos h1 {
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    width: 100%;
-}
+
+    #sala-visualizar h1, #sala-editar h1, #alunos h1 {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        width: 100%;
+    }
+
 #sala-editar h2 {
     font-size: 15px;
     text-align: center;
@@ -364,22 +413,26 @@ p, label {
     font-weight: bold;
     margin: 0px;
 }
-#sala-visualizar .esquerda{
+
+#sala-visualizar .esquerda {
     background: red;
     width: 40%;
     margin: 10px;
     padding: 5px;
 }
+
 #alunos .esquerda {
     width: 100%;
     height: 45%;
 }
-#sala-visualizar .direita{
+
+#sala-visualizar .direita {
     width: 50%;
     height: 100%;
     margin: 10px;
     padding: 5px;
 }
+
 #alunos .direita {
     width: 100%;
     height: 45%;
@@ -387,16 +440,19 @@ p, label {
     display: flex;
     margin-top: 20px;
 }
+
     #alunos .direita p {
         font-weight: bold;
         font-weight: bold;
         font-size: 20px;
     }
+
 #tabelaSalas_wrapper {
     overflow-x: hidden;
     height: 75%;
     padding-right: 5px;
 }
+
 #login, #cadastro {
     background: white;
     height: 100%;
@@ -654,16 +710,6 @@ p, label {
     display: none;
 }
 
-#nova_sala .jogos .meteoro {
-    background-image: url(../images/meteoro.png);
-    position: relative;
-}
-
-#nova_sala .jogos .mestre {
-    background-image: url("../images/mestre.png");
-    position: relative;
-}
-
 #cadastrar_pergunta h1 {
     color: white;
     margin-top: 30px;
@@ -702,18 +748,4 @@ p, label {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-#sala-visualizar .esquerda, #alunos .esquerda {
-    width: 45%;
-    height: 100%;
-    margin: 10px;
-    padding: 5px;
-}
-
-#sala-visualizar .direita, #alunos .direita {
-    width: 45%;
-    height: 100%;
-    margin: 10px;
-    padding: 5px;
 }
