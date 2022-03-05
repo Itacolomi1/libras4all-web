@@ -6,8 +6,8 @@ var idSala;
 var token = localStorage.getItem('user_token').replaceAll("\"", "");
 var id = localStorage.getItem('user_id').replaceAll("\"", "");
 
-var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWJlOWI4MmQ1M2EzMDAxNmEwYjU2ZSIsImlhdCI6MTY0NjQyMzE4OH0.jlc0iaSFUx39GxJnhiYLKTQe9oO1o6tra50xICr-iDQ';
-var id = '621be9b82d53a30016a0b56e';
+//var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWJlOWI4MmQ1M2EzMDAxNmEwYjU2ZSIsImlhdCI6MTY0NjQyMzE4OH0.jlc0iaSFUx39GxJnhiYLKTQe9oO1o6tra50xICr-iDQ';
+//var id = '621be9b82d53a30016a0b56e';
 
 async function AdicionaLista(alunos, token) {
 
