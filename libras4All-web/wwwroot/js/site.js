@@ -41,19 +41,6 @@ $("#nova_sala .quiz").click(function () {
     $(".fundo_modal").css("display", "block");
 });
 
-$(".quantidade .menos").click(function () {
-    var valor = $(this).parent().find("label").text()
-    if (valor > 0) {
-        var valorfinal = parseInt(valor) - 1;
-        $(this).parent().find("label").text(valorfinal);
-    }
-});
-$(".quantidade .mais").click(function () {
-    var valor = $(this).parent().find("label").text()
-    var valorfinal = parseInt(valor) + 1;
-    $(this).parent().find("label").text(valorfinal);
-    
-});
 $("#modal_quiz #nova_pergunta").click(function () {
     
     if(c == 0) {
