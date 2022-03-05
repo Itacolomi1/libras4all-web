@@ -9,7 +9,9 @@ body, html {
 #alunos .esquerda p {
     font-weight: bold;
     font-size: 20px;
+    text-align-last: center;
 }
+
 
 #tabelaAlunos_wrapper {
     height: 75%;
@@ -336,6 +338,17 @@ table.tabelaSala {
 
 #alunos .cima {
     width: 100%;
+    border-style: solid;
+    border-color: #154C79;
+    border-radius: 20px;
+}
+
+#divSala {
+    display:none;
+}
+
+#divDesempenho{
+    display:none;
 }
 
 #alunos {
@@ -417,6 +430,9 @@ p, label {
 #alunos .esquerda {
     width: 100%;
     height: 45%;
+    border-style: solid;
+    border-color: #154C79;
+    border-radius: 20px;
 }
 
 #sala-visualizar .direita {
@@ -438,6 +454,7 @@ p, label {
         font-weight: bold;
         font-weight: bold;
         font-size: 20px;
+        text-align: center;
     }
 
 #tabelaSalas_wrapper {

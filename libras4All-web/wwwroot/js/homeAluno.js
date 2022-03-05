@@ -78,6 +78,8 @@ async function CarregaDados() {
 }
 
 async function montaTabela() {
+
+
     await $('#tabelaAlunos').DataTable({
         dom: "Bfrtip",
         "columnDefs": [
@@ -86,7 +88,16 @@ async function montaTabela() {
                 "visible": false,
                 "searchable": false
             },
+            { "width": "50%", "targets": 1 }
         ],
+        "language": {
+            "paginate": {
+                "previous": "Anterior",
+                "next": "Próximo"
+            },
+            "search": "Pesquisar: ",
+            "info": "_PAGE_ de _PAGES_"
+        },
         data: array,
         columns: [
             { data: "_id" },
@@ -100,22 +111,39 @@ async function montaTabela() {
     $('#tabelaAlunos tbody').on('click', 'tr', function () {
 
         idAluno = table.row(this).data()._id;
-
         $('#tabelaSalas').DataTable().clear();
         CarregaDadosAlunoSelecionado(idAluno);
     });
 
 }
 async function montaTabelaSalas(dado) {
-    debugger;
+
+    document.getElementById("divSala").style.display = 'block';
 
     await $('#tabelaSalas').DataTable({
         dom: "Bfrtip",
+        "columnDefs": [
+            {
+                "targets": [0],
+                "visible": false,
+                "searchable": false
+            },
+            { "width": "50%", "targets": 1 }
+        ],
+        "language": {
+            "paginate": {
+                "previous": "Anterior",
+                "next": "Próximo"
+            },
+            "search": "Pesquisar: ",
+            "info": "_PAGE_ de _PAGES_"
+        },
         data: dado,
         destroy: true,
         columns: [
+            { data: "_id" },
             { data: "descricao" },
-            {data: "tipoJogo"},
+            { data: "tipoJogo" },
         ],
     });
 
@@ -123,6 +151,8 @@ async function montaTabelaSalas(dado) {
 
     $('#tabelaSalas tbody').on('click', 'tr', function () {
 
+        console.log(tab.row(this).data());
+        debugger;
         idSala = tab.row(this).data()._id;
         BuscaAcertosErros(idAluno, idSala);
 
@@ -132,10 +162,10 @@ async function montaTabelaSalas(dado) {
 $(document).ready(function () {
 
     CarregaDados();
-    
+
 });
 
-async function BuscaAcertosErros(id_aluno, id_sala) {    
+async function BuscaAcertosErros(id_aluno, id_sala) {
 
     var url = "https://libras4all.herokuapp.com/api/historico/quantidadePorAluno/" + id_sala + "/" + id_aluno;
 
@@ -147,38 +177,41 @@ async function BuscaAcertosErros(id_aluno, id_sala) {
         },
         success: function (retorno) {
 
-           Grafico(retorno);           
-           
+            console.log(retorno);
+            Grafico(retorno);
+
         }
     });
 }
 
- function Grafico(dados) {
+function Grafico(dados) {
+
+    document.getElementById("divDesempenho").style.display = 'block';
 
     const propertyValues = Object.values(dados);
 
-     console.log(propertyValues);
-     debugger;
-     let ctx = document.getElementById('primeiroGrafico');
+    console.log(propertyValues);
+
+    let ctx = document.getElementById('primeiroGrafico');
     let myBarChart = new Chart(ctx, {
         type: 'bar',
         data: {
-           
+
             labels: ['Acertos', 'Erros'],
             datasets: [{
                 // Legenda geral
-                label: '',               
-                data: propertyValues,            
-                
+                label: '',
+                data: propertyValues,
+
                 backgroundColor: [
                     'rgba(0,191,255)',
                     'rgba(255,0,0)',
-                    
+
                 ],
-                
+
                 borderColor: [
                     'rgba(0,0,139)',
-                    'rgba(139,0,0)',                   
+                    'rgba(139,0,0)',
                 ],
                 // Define a espessura da borda dos retângulos
                 borderWidth: 1
@@ -197,5 +230,5 @@ async function BuscaAcertosErros(id_aluno, id_sala) {
             }
         }
     });
-    
+
 }
