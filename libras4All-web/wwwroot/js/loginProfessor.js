@@ -12,18 +12,14 @@
     })
         .done(function (data) {
             localStorage.setItem('user_token', JSON.stringify(data.token));
-<<<<<<< HEAD
+
             localStorage.setItem('user_id', JSON.stringify(data._id));
             
-           
-            window.location = "https://localhost:44319/Home"
 
-
-=======
-            localStorage.setItem('user_id', JSON.stringify(data._id));         
+            localStorage.setItem('user_id', JSON.stringify(data._id));
             window.location = "https://libras4all-web.herokuapp.com/Home";
->>>>>>> master
+
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Usuário ou Senha inválido");
         });
-    }
+}
