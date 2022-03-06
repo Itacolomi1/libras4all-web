@@ -8,13 +8,18 @@
         type: "POST",
         url: url,
         data: usuario,
+        beforeSend: function () {
+            
+            $("#logar").html("<img id='loadingLogin' src='./images/load.gif'>");
+            
+        },
         cache: false
     })
         .done(function (data) {
-            localStorage.setItem('user_token', JSON.stringify(data.token));
-
-            localStorage.setItem('user_id', JSON.stringify(data._id));
             
+           // $("#logar").html("");
+            localStorage.setItem('user_token', JSON.stringify(data.token));
+            localStorage.setItem('user_id', JSON.stringify(data._id));          
 
             localStorage.setItem('user_id', JSON.stringify(data._id));
             window.location = "https://libras4all-web.herokuapp.com/Home";

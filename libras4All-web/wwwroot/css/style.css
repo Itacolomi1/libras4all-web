@@ -344,12 +344,18 @@ table.tabelaSala {
 }
 
 #divSala {
-    display:none;
+    display: none;
 }
 
-#divDesempenho{
-    display:none;
+
+#divDesempenho {
+    display: none;
+    border-style: solid;
+    border-color: #154C79;
+    margin-right: 10px;
+    border-radius: 20px;
 }
+
 
 #alunos {
     margin-top: 20px;
@@ -427,6 +433,18 @@ p, label {
     padding: 5px;
 }
 
+#loading {
+    width: 20%;
+    height: 50%;
+    margin-top: 30px;
+    margin-left: 220px;
+}
+
+#loadingLogin {
+    width: 20%;
+    height: 50%;
+}
+
 #alunos .esquerda {
     width: 100%;
     height: 45%;
@@ -444,10 +462,10 @@ p, label {
 
 #alunos .direita {
     width: 100%;
-    height: 45%;
+    height: 50%;
     padding: 5px;
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
     #alunos .direita p {
@@ -739,6 +757,11 @@ p, label {
 
 #cadastrar_pergunta #primeira, #cadastrar_pergunta #segunda, #cadastrar_pergunta #terceira {
     width: 15px;
+}
+
+#primeiroGrafico {
+    height: 150px;
+    width: 220px;
 }
 
 #cadastrar_pergunta span {

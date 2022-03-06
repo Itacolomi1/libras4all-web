@@ -1,4 +1,6 @@
-﻿var array = [];
+﻿
+
+var array = [];
 
 var idAluno;
 var idSala;
@@ -6,8 +8,13 @@ var idSala;
 var token = localStorage.getItem('user_token').replaceAll("\"", "");
 var id = localStorage.getItem('user_id').replaceAll("\"", "");
 
-//var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWJlOWI4MmQ1M2EzMDAxNmEwYjU2ZSIsImlhdCI6MTY0NjQyMzE4OH0.jlc0iaSFUx39GxJnhiYLKTQe9oO1o6tra50xICr-iDQ';
-//var id = '621be9b82d53a30016a0b56e';
+
+$(document).ready(function () {
+
+    CarregaDados();
+    debugger;
+
+});
 
 async function AdicionaLista(alunos, token) {
 
@@ -15,6 +22,7 @@ async function AdicionaLista(alunos, token) {
     for (i = 0; i < alunos.length; i++) {
 
         var _id = JSON.stringify(alunos[i]).replaceAll('"', "");
+
         var url2 = url + _id;
         await $.ajax({
             type: "GET",
@@ -23,9 +31,15 @@ async function AdicionaLista(alunos, token) {
             headers: {
                 authorization: 'bearer ' + token
             },
+            beforeSend: function () {
+                //Aqui adicionas o loader
+                $("#tabelaAlunos").html("<img id='loading' src='./images/load.gif'>");
+
+            },
             success: function (retorno) {
 
                 array.push(retorno);
+                $('#tabelaAlunos').html("");
 
             },
             error: function () {
@@ -33,7 +47,6 @@ async function AdicionaLista(alunos, token) {
             }
 
         });
-
     }
 
     montaTabela();
@@ -50,14 +63,21 @@ async function CarregaDadosAlunoSelecionado(id) {
         headers: {
             authorization: 'bearer ' + token
         },
+        beforeSend: function () {
+            //Aqui adicionas o loader
+            $("#tabelaSalas").html("<img id='loading' src='./images/load.gif'>");
+
+        },
         success: function (retorno) {
 
+            $("#tabelaSalas").html("");
             montaTabelaSalas(retorno);
 
         }
     });
 
 }
+
 
 async function CarregaDados() {
 
@@ -79,6 +99,7 @@ async function CarregaDados() {
 
 async function montaTabela() {
 
+    $('#tabelaAlunos').show();
 
     await $('#tabelaAlunos').DataTable({
         dom: "Bfrtip",
@@ -90,6 +111,7 @@ async function montaTabela() {
             },
             { "width": "50%", "targets": 1 }
         ],
+        "pageLength": 3,
         "language": {
             "paginate": {
                 "previous": "Anterior",
@@ -110,12 +132,16 @@ async function montaTabela() {
 
     $('#tabelaAlunos tbody').on('click', 'tr', function () {
 
+        $('#divDesempenho').hide();
+
         idAluno = table.row(this).data()._id;
         $('#tabelaSalas').DataTable().clear();
         CarregaDadosAlunoSelecionado(idAluno);
     });
 
 }
+
+
 async function montaTabelaSalas(dado) {
 
     document.getElementById("divSala").style.display = 'block';
@@ -149,21 +175,16 @@ async function montaTabelaSalas(dado) {
 
     var tab = $('#tabelaSalas').DataTable();
 
-    $('#tabelaSalas tbody').on('click', 'tr', function () {
 
-        console.log(tab.row(this).data());
-        debugger;
-        idSala = tab.row(this).data()._id;
+    tab.$('tr').click(function () {
+
+        var data = tab.row(this).cache();
+        idSala = data[0];
         BuscaAcertosErros(idAluno, idSala);
 
     });
 }
 
-$(document).ready(function () {
-
-    CarregaDados();
-
-});
 
 async function BuscaAcertosErros(id_aluno, id_sala) {
 
@@ -177,9 +198,7 @@ async function BuscaAcertosErros(id_aluno, id_sala) {
         },
         success: function (retorno) {
 
-            console.log(retorno);
             Grafico(retorno);
-
         }
     });
 }
@@ -189,8 +208,6 @@ function Grafico(dados) {
     document.getElementById("divDesempenho").style.display = 'block';
 
     const propertyValues = Object.values(dados);
-
-    console.log(propertyValues);
 
     let ctx = document.getElementById('primeiroGrafico');
     let myBarChart = new Chart(ctx, {
@@ -213,6 +230,7 @@ function Grafico(dados) {
                     'rgba(0,0,139)',
                     'rgba(139,0,0)',
                 ],
+
                 // Define a espessura da borda dos retângulos
                 borderWidth: 1
             }]
@@ -223,12 +241,20 @@ function Grafico(dados) {
                     ticks: {
                         beginAtZero: true
                     }
-                }]
+                }],
+                xAxes: [{
+                    categoryPercentage: 0.9,
+                    barPercentage: 0.5
+                }],
             },
             legend: {
                 display: false
-            }
+            },
+            maintainAspectRatio: false,
+            responsive: true
         }
+
     });
+
 
 }
