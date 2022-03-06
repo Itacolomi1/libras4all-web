@@ -11,20 +11,22 @@ var tabelaItem;
 
 
 $(document).ready(function () {
+    
     buscarSala();
     buscarRanking();
     buscarItens();
 });
 
-function buscarSala() {
-    $.ajax({
+async function buscarSala() {
+   await $.ajax({
         type: "GET",
         url: url + "sala/" + idSala,
         cache: false,
         async: false,
         headers: {
             Authorization: 'Bearer ' + token
-        }
+        },
+     
     })
         .done(function (data) {
             sala = data;
@@ -34,8 +36,8 @@ function buscarSala() {
         });
 }
 
-function buscarItens() {
-    $.ajax({
+async function buscarItens() {
+ await   $.ajax({
         type: "GET",
         url: url + "historico/obterItens/" + idSala,
         cache: false,
@@ -44,7 +46,8 @@ function buscarItens() {
             Authorization: 'Bearer ' + token
         }
     })
-        .done(function (data) {
+     .done(function (data) {
+         
             itens = data;
             buscarDescricaoItens();
 
@@ -80,6 +83,9 @@ function buscarDescricaoItens() {
 }
 
 function preencherTabelaItens() {
+
+    $('#itens').show();
+
     tabelaItem = $('#tabelaItens').DataTable({
         dom: "Bfrtip",
         bFilter: false,
@@ -195,17 +201,18 @@ function buscarItem(urlItem, indice) {
         });
 }
 
-function buscarRanking() {
-    $.ajax({
+async function buscarRanking() {
+  await  $.ajax({
         type: "GET",
         url: url + "historico/obterMelhoresAlunos/" + idSala,
         cache: false,
         async: false,
         headers: {
             Authorization: 'Bearer ' + token
-        }
+        }      
     })
         .done(function (data) {
+          
             dadosCompletos = data;
             buscarAlunos();
 
@@ -223,6 +230,10 @@ function buscarAlunos() {
 }
 
 function popularRanking() {
+
+
+    $('#ranking').show();
+    
     $('#tabelaRanking').DataTable({
         dom: "Bfrtip",
         bFilter: false,

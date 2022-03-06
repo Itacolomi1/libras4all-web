@@ -426,12 +426,28 @@ p, label {
     margin: 0px;
 }
 
+#ranking {
+    display:none;
+
+}
+
+#itens{
+    display:none;
+}
+
 #sala-visualizar .esquerda {
-    background: red;
     width: 40%;
     margin: 10px;
     padding: 5px;
+    border-style: solid;
+    border-color: #154C79;
+    border-radius: 10px;
 }
+
+#txtSala {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
 
 #loading {
     width: 20%;
@@ -458,6 +474,9 @@ p, label {
     height: 100%;
     margin: 10px;
     padding: 5px;
+    border-style: solid;
+    border-color: #154C79;
+    border-radius: 10px;
 }
 
 #alunos .direita {

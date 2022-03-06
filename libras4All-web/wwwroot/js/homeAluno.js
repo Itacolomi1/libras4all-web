@@ -220,13 +220,13 @@ function Grafico(dados) {
                 data: propertyValues,
 
                 backgroundColor: [
-                    'rgba(0,191,255)',
+                    'rgba(0,255,127)',
                     'rgba(255,0,0)',
 
                 ],
 
                 borderColor: [
-                    'rgba(0,0,139)',
+                    'rgba(0,100,0)',
                     'rgba(139,0,0)',
                 ],
 
