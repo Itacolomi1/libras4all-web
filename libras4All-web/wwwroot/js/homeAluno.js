@@ -12,8 +12,7 @@ var id = localStorage.getItem('user_id').replaceAll("\"", "");
 $(document).ready(function () {
 
     CarregaDados();
-    debugger;
-
+    
 });
 
 async function AdicionaLista(alunos, token) {
