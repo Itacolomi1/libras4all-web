@@ -15,9 +15,8 @@
         },
         cache: false
     })
-        .done(function (data) {
-            
-           // $("#logar").html("");
+        .done(function (data) {            
+           
             localStorage.setItem('user_token', JSON.stringify(data.token));
             localStorage.setItem('user_id', JSON.stringify(data._id));          
 
@@ -26,5 +25,6 @@
 
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Usuário ou Senha inválido");
+            location.reload();
         });
 }

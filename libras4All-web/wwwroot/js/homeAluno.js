@@ -31,7 +31,7 @@ async function AdicionaLista(alunos, token) {
                 authorization: 'bearer ' + token
             },
             beforeSend: function () {
-                //Aqui adicionas o loader
+                
                 $("#tabelaAlunos").html("<img id='loading' src='./images/load.gif'>");
 
             },
@@ -132,7 +132,7 @@ async function montaTabela() {
     $('#tabelaAlunos tbody').on('click', 'tr', function () {
 
         $('#divDesempenho').hide();
-
+        $("#divDesempenho").html("<canvas id='primeiroGrafico'></canvas>");      
         idAluno = table.row(this).data()._id;
         $('#tabelaSalas').DataTable().clear();
         CarregaDadosAlunoSelecionado(idAluno);
@@ -176,11 +176,11 @@ async function montaTabelaSalas(dado) {
 
 
     tab.$('tr').click(function () {
-
+        debugger;
+        
         var data = tab.row(this).cache();
         idSala = data[0];
         BuscaAcertosErros(idAluno, idSala);
-
     });
 }
 
@@ -230,11 +230,14 @@ function Grafico(dados) {
                     'rgba(139,0,0)',
                 ],
 
-                // Define a espessura da borda dos retângulos
                 borderWidth: 1
             }]
         },
         options: {
+            title: {
+                display: true,
+                text: "Desempenho"
+            },
             scales: {
                 yAxes: [{
                     ticks: {
