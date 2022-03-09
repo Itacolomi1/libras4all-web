@@ -14,7 +14,7 @@
     <div id='sala-visualizar'>
         <h1 id="txtSala"></h1>
 
-        <div id="ranking" class="esquerda">
+        <div id="tableRanking"  class="esquerda">
             <h3>Ranking</h3>
             <table id="tabelaRanking" class="display" cellspacing="0" width="100%">
                 <thead>
@@ -31,13 +31,12 @@
                 </tfoot>
             </table>
         </div>
-        <div id="itens" class="direita">
-
-            <div class="esquerda" id="divGrafico">
+        <div  class="direita">
+            <div id="divGrafico" class="baixo">
+                
                 <canvas id="graficoItens" style="width:100%;max-width:600px"></canvas>
             </div>
-
-            <div class="cima" id="tabelaitens">
+            <div class="cima" id="itens">
                 <h3>Jogo</h3>
                 <table id="tabelaItens" class="display" cellspacing="0" width="100%">
                     <thead>
@@ -51,12 +50,9 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
-
-
         </div>
-        
-    </div>
     <script src="./js/visualizarSala.js"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>

@@ -18,6 +18,9 @@ $(document).ready(function () {
 });
 
 async function buscarSala() {
+
+    $('#tabelaRanking').show();
+
    await $.ajax({
         type: "GET",
         url: url + "sala/" + idSala,
@@ -110,7 +113,7 @@ function preencherTabelaItens() {
 
 $('#tabelaItens tbody').on('click', 'tr', function () {
 
-    $("#grafico").html("<canvas id='graficoItens'></canvas>"); 
+    $("#divGrafico").html("<canvas id='graficoItens'></canvas>"); 
     var idItem = tabelaItem.row(this).data()._id;
     buscarDadosGrafico(idItem);
 });
@@ -133,6 +136,7 @@ function buscarDadosGrafico(idItem) {
 }
 
 function montarGrafico(dados) {
+    
     var x = ["Acertos", "Erros"];
     var y = [dados.quantidadeAcertos, dados.quantidadeErros];
     var barColors = [
