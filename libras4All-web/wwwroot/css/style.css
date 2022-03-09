@@ -308,6 +308,11 @@ table.tabelaSala {
     height: 420px;
 }
 
+#ranking .h3 {
+    text-align: center;
+    font-family: monospace;
+}
+
 #perfil {
     position: absolute;
     top: 0;
@@ -323,7 +328,7 @@ table.tabelaSala {
 }
 
 #sala-visualizar {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -427,25 +432,25 @@ p, label {
 }
 
 #ranking {
-    display:none;
-
+    display: none;
 }
 
-#itens{
-    display:none;
+#itens {
+    display: none;
 }
 
 #sala-visualizar .esquerda {
-    width: 40%;
-    margin: 10px;
-    padding: 5px;
+    width: 100%;
+    height: 45%;
     border-style: solid;
     border-color: #154C79;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
 }
 
 #txtSala {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: monospace;
 }
 
 
@@ -470,13 +475,31 @@ p, label {
 }
 
 #sala-visualizar .direita {
-    width: 50%;
-    height: 100%;
-    margin: 10px;
-    padding: 5px;
+    
     border-style: solid;
     border-color: #154C79;
-    border-radius: 10px;
+    border-radius: 20px;
+    height: 225px;
+    width: 100%;
+    height: 50%;
+    padding: 5px;
+    display: flex;
+    margin-top: 10px;
+}
+
+#divGrafico .esquerda {
+    width: 50%;
+    border-style: solid;
+    border-color: #154C79;
+    border-radius: 20px;
+    height: 225px;
+    margin-right: 45%;
+    margin-left: 0%;
+}
+
+#tabelaitens {
+    margin-right: 0;
+    margin-left: 45%;
 }
 
 #alunos .direita {

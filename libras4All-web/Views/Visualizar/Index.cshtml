@@ -32,21 +32,30 @@
             </table>
         </div>
         <div id="itens" class="direita">
-            <h3>Jogo</h3>
-            <table id="tabelaItens" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <canvas id="graficoItens" style="width:100%;max-width:600px"></canvas>
+
+            <div class="esquerda" id="divGrafico">
+                <canvas id="graficoItens" style="width:100%;max-width:600px"></canvas>
+            </div>
+
+            <div class="cima" id="tabelaitens">
+                <h3>Jogo</h3>
+                <table id="tabelaItens" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
         </div>
+        
     </div>
     <script src="./js/visualizarSala.js"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>

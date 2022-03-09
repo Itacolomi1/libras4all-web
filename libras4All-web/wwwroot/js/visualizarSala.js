@@ -109,6 +109,8 @@ function preencherTabelaItens() {
 }
 
 $('#tabelaItens tbody').on('click', 'tr', function () {
+
+    $("#grafico").html("<canvas id='graficoItens'></canvas>"); 
     var idItem = tabelaItem.row(this).data()._id;
     buscarDadosGrafico(idItem);
 });

@@ -176,8 +176,7 @@ async function montaTabelaSalas(dado) {
 
 
     tab.$('tr').click(function () {
-        debugger;
-        
+              
         var data = tab.row(this).cache();
         idSala = data[0];
         BuscaAcertosErros(idAluno, idSala);
