@@ -18,6 +18,9 @@ body, html {
     overflow-x: hidden;
     padding-right: 5px;
 }
+#tabelaAlunos, #tabelaSalas {
+    cursor: pointer;
+}
 
 .menu {
     background-color: rgb(35, 36, 95);
@@ -121,6 +124,7 @@ li.activo {
             width: calc(95%/3);
             height: 200px;
             background-size: contain;
+            cursor:pointer;
         }
 
         #nova_sala .jogos .meteoro {
@@ -167,7 +171,9 @@ button.salvar {
     background: rgb(35 36 95);
 }
 
-#sala-editar button.salvar, #perfil button.salvar {
+
+
+#sala-editar button.salvar {
     width: 100%;
     height: 30px;
     border: none;
@@ -181,7 +187,7 @@ button.salvar {
     background: rgb(35 36 95);
 }
 
-    button.salvar:hover, #sala-editar button.salvar:hover, .img-perfil:hover, #salas button:hover, #perfil button.salvar:hover {
+    button.salvar:hover, #sala-editar button.salvar:hover, .img-perfil:hover, #salas button:hover, #perfil button.salvar:hover, #perfil button.logout:hover {
         color: white;
         background: #037ca9;
         border: none;
@@ -334,6 +340,10 @@ table.tabelaSala {
     border-radius: 20px;
 }
 
+#sala-visualizar .cima{
+    cursor:pointer;
+}
+
 #divSala {
     display: none;
 }
@@ -341,6 +351,11 @@ table.tabelaSala {
 #tabelaRanking {
     display: none;
 }
+
+#tabelaItens{
+    display:none;
+}
+
 #divDesempenho {
     display: none;
     border-style: solid;
@@ -424,11 +439,6 @@ p, label {
 
 }
 
-#itens{
-    display:none;
-}
-
-
 
 #txtSala {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -461,9 +471,17 @@ p, label {
     margin-right:10px
 }
 
+#jogoMeteoro:hover , #jogoQuiz:hover , #jogoMestre:hover {
+    border-style: solid;
+    border-color:lawngreen;
+    border-radius: 30px;
+    transition: width 2s;
+}
+
 #graficoItens{
     margin-top:80px;
 }
+
 
 #alunos .esquerda {
     width: 100%;
@@ -526,6 +544,25 @@ p, label {
     background: white;
     color: rgb(35, 36, 95);
     margin-bottom: 25px;
+}
+
+button.logout {
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: rgb(35, 36, 95);
+}
+
+#perfil button.logout {
+    width: 100%;
+    margin: 10px;
 }
 
 .square div, #perfil .separa {
@@ -716,6 +753,7 @@ p, label {
         color: rgb(35, 36, 95);
         margin: 10px;
     }
+
 
 #duvida_meteoro, #duvida_mestre {
     position: absolute;

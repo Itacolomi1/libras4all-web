@@ -11,25 +11,25 @@ var tabelaItem;
 
 
 $(document).ready(function () {
-    
+
     buscarSala();
     buscarRanking();
     buscarItens();
 });
 
-async function buscarSala() {
+function buscarSala() {
 
     $('#tabelaRanking').show();
+    $('#tabelaItens').show();
 
-   await $.ajax({
+    $.ajax({
         type: "GET",
         url: url + "sala/" + idSala,
         cache: false,
         async: false,
         headers: {
             Authorization: 'Bearer ' + token
-        },
-     
+        }
     })
         .done(function (data) {
             sala = data;
@@ -40,7 +40,8 @@ async function buscarSala() {
 }
 
 async function buscarItens() {
- await   $.ajax({
+
+    await $.ajax({
         type: "GET",
         url: url + "historico/obterItens/" + idSala,
         cache: false,
@@ -49,8 +50,8 @@ async function buscarItens() {
             Authorization: 'Bearer ' + token
         }
     })
-     .done(function (data) {
-         
+        .done(function (data) {
+
             itens = data;
             buscarDescricaoItens();
 
@@ -87,8 +88,6 @@ function buscarDescricaoItens() {
 
 function preencherTabelaItens() {
 
-    $('#itens').show();
-
     tabelaItem = $('#tabelaItens').DataTable({
         dom: "Bfrtip",
         bFilter: false,
@@ -113,7 +112,7 @@ function preencherTabelaItens() {
 
 $('#tabelaItens tbody').on('click', 'tr', function () {
 
-    $("#divGrafico").html("<canvas id='graficoItens'></canvas>"); 
+    $("#divGrafico").html("<canvas id='graficoItens'></canvas>");
     var idItem = tabelaItem.row(this).data()._id;
     buscarDadosGrafico(idItem);
 });
@@ -136,7 +135,7 @@ function buscarDadosGrafico(idItem) {
 }
 
 function montarGrafico(dados) {
-    
+
     var x = ["Acertos", "Erros"];
     var y = [dados.quantidadeAcertos, dados.quantidadeErros];
     var barColors = [
@@ -207,18 +206,19 @@ function buscarItem(urlItem, indice) {
         });
 }
 
-async function buscarRanking() {
-  await  $.ajax({
+function buscarRanking() {
+
+    $.ajax({
         type: "GET",
         url: url + "historico/obterMelhoresAlunos/" + idSala,
         cache: false,
         async: false,
         headers: {
             Authorization: 'Bearer ' + token
-        }      
+        },
     })
         .done(function (data) {
-          
+
             dadosCompletos = data;
             buscarAlunos();
 
@@ -239,7 +239,7 @@ function popularRanking() {
 
 
     $('#ranking').show();
-    
+
     $('#tabelaRanking').DataTable({
         dom: "Bfrtip",
         bFilter: false,

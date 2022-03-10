@@ -6,12 +6,12 @@
 <div id='nova_sala'>
     <input type="text" name="input" id="txtDescricao" placeholder="Digite o Nome da Sala...">
     <div class="jogos">
-        <div class="quiz" onclick="jogoEscolhido('Quiz')">
+        <div id ="jogoQuiz" class="quiz" onclick="jogoEscolhido('Quiz')">
         </div>
-        <div class="meteoro" onclick="jogoEscolhido('Meteoro')">
+        <div id ="jogoMeteoro" class="meteoro" onclick="jogoEscolhido('Meteoro')">
             <div class="abrir_duvida_meteoro"></div>
         </div>
-        <div class="mestre" onclick="jogoEscolhido('Mestre Mandou')">
+        <div id ="jogoMestre" class="mestre" onclick="jogoEscolhido('Mestre Mandou')">
             <div class="abrir_duvida_mestre"></div>
         </div>
     </div>
@@ -105,8 +105,9 @@
                     <input type="text" id="txtTerceiraAlternativa" name="input" placeholder="Digite a alternativa...">
                 </div>
                 <span>Selecione a alternativa correta</span>
-                <button class='salvar'onclick="cadastrarPergunta()">Salvar</button>
+                <button class='salvar' onclick="cadastrarPergunta()">Salvar</button>
             </div>
+           
         </div>
 
     </div>

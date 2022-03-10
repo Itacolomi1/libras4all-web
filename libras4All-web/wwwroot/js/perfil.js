@@ -16,3 +16,21 @@ $(document).ready(function () {
             $('#lbEmail').text(data.email);
         });
 });
+
+//function Logout() {
+//    debugger;
+    
+//}
+
+function Logout() {
+    var x;
+    var r = confirm("Deseja realmente sair?");
+    if (r == true) {
+        window.localStorage.clear();
+        window.location = "https://libras4all-web.herokuapp.com/Login";
+    }
+    else {
+        window.location = "https://libras4all-web.herokuapp.com/Perfil";
+    }
+   
+}
