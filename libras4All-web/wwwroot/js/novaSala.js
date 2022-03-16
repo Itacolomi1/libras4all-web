@@ -1,18 +1,21 @@
 ﻿var url = "https://libras4all.herokuapp.com/api/";
-var token = localStorage.getItem('user_token').replaceAll("\"", "");
-var id = localStorage.getItem('user_id').replaceAll("\"", "");
+
+var token;
+var id;
 var jogoSelecionado = null;
 
 var quantidadePerguntas = [];
-/*
- História: 0
- Alfabeto: 1
- Numerais: 2
- Saudacoes: 3
- Customizadas: 4
- */
+
 
 $(document).ready(function () {
+    if (localStorage.getItem('user_token') == null) {
+        alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
+        window.location = "https://libras4all-web.herokuapp.com/Login";
+    }
+
+    id = localStorage.getItem('user_id').replaceAll("\"", "");
+    token = localStorage.getItem('user_token').replaceAll("\"", "");
+
     obterQuantidadePerguntas('História')
     obterQuantidadePerguntas('Alfabeto');
     obterQuantidadePerguntas('Numerais');

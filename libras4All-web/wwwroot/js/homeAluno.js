@@ -5,11 +5,19 @@ var array = [];
 var idAluno;
 var idSala;
 
-var token = localStorage.getItem('user_token').replaceAll("\"", "");
-var id = localStorage.getItem('user_id').replaceAll("\"", "");
+var token;
+var id;
 
 
 $(document).ready(function () {
+
+    if (localStorage.getItem('user_token') == null) {
+        alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
+        window.location = "https://libras4all-web.herokuapp.com/Login";
+    }
+
+    id = localStorage.getItem('user_id').replaceAll("\"", "");
+    token = localStorage.getItem('user_token').replaceAll("\"", "");
 
     CarregaDados();
     

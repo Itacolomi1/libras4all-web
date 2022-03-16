@@ -1,6 +1,14 @@
-﻿$(document).ready(function () {
-    var token = localStorage.getItem('user_token').replaceAll("\"", "");
+﻿
+
+$(document).ready(function () {
+
+    if (localStorage.getItem('user_token') == null) {
+        alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
+        window.location = "https://libras4all-web.herokuapp.com/Login";
+    }
+
     var id = localStorage.getItem('user_id').replaceAll("\"", "");
+    var token = localStorage.getItem('user_token').replaceAll("\"", "");
 
     var url = "https://libras4all.herokuapp.com/api/sala/listarSalasProfessor/"
 
