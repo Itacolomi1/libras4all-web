@@ -200,6 +200,10 @@ button.salvar {
     align-items: center;
 }
 
+.pb-3 {
+    height: 300px;
+}
+
     #salas button {
         height: 30px;
         border: none;
@@ -215,6 +219,35 @@ button.salvar {
         margin-left: 10px;
         width: 100px;
     }
+
+.privacy {
+    margin: 30px;
+    width: 500px;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+    .privacy h1 {
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        width: 100%;
+        font-family: "Monaco", "Courier New", monospace;
+    }
+
+    .privacy h3 {
+        font-size: 20px;
+      
+        font-weight: bold;
+        width: 100%;
+        font-family: "Monaco", "Courier New", monospace;
+    }
+
+    .privacy p {
+        text-align: justify;
+        text-indent: 10px;
+    }
+   
 
 #divTabela {
     width: 90%;
