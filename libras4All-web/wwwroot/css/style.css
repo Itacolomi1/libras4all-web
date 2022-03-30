@@ -258,6 +258,11 @@ tr {
     font-size: 13px;
 }
 
+.container {
+    
+    text-align: center;
+}
+
 input-search {
     border: 1px solid #CCC;
     padding: 5px 14px;
