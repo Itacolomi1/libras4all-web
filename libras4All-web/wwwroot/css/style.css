@@ -120,6 +120,7 @@ li.activo {
         height: 200px;
     }
 
+  
         #nova_sala .jogos div, #home .jogos div {
             width: calc(95%/3);
             height: 200px;
@@ -147,6 +148,13 @@ li.activo {
 .jogos .quiz {
     background-image: url("../images/quiz.png");
 }
+
+.flyer img {
+    float: left;
+    width: 100%;   
+    border-radius: 20px;
+}
+
 
 #nova_sala .jogos .mestre {
     background-image: url("../images/mestre.png");
@@ -598,6 +606,27 @@ button.logout {
     background: rgb(35, 36, 95);
 }
 
+button.login {
+    width: 70%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: rgb(35, 36, 95);
+}
+
+#home button.login {
+    width: 40%;
+    position: absolute;
+    left: 50px;
+    bottom: 40px;
+}
+
 #perfil button.logout {
     width: 100%;
     margin: 10px;
@@ -682,6 +711,14 @@ button.logout {
     background-position-y: 5px;
 }
 
+.email-icon {
+    background-image: url(../images/email.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 5px;
+    background-position-y: 5px;
+}
+
 .senha-icon {
     background-image: url(../images/cadeado.png);
     background-repeat: no-repeat;
@@ -714,6 +751,7 @@ button.logout {
     background: rgb(35, 36, 95);
     margin: auto;
 }
+
 
 .fundo_modal {
     background: #212529e6;

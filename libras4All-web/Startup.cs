@@ -50,7 +50,7 @@ namespace libras4All_web
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Login}/{action=Index}/{id?}");
+                    pattern: "{controller=HomePage}/{action=Index}/{id?}");
             });
         }
     }

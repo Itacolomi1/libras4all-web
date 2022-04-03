@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace libras4All_web.Controllers
 {
-    public class HomeController : Controller
+    public class HomePageController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomePageController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
@@ -23,7 +23,10 @@ namespace libras4All_web.Controllers
             return View();
         }
 
-        
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

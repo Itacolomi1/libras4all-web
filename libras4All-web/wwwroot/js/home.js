@@ -3,7 +3,8 @@ var id;
 var url = "https://libras4all.herokuapp.com/api/sala/listarSalasProfessor/";
 
 $(document).ready(function () {
-    if (localStorage.getItem('user_token') == null) {
+    debugger;
+    if (localStorage.getItem('user_token') == null || localStorage.getItem('user_id') == null ) {
         alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
         window.location = "https://libras4all-web.herokuapp.com/Login";
     }
