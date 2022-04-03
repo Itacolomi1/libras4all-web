@@ -668,6 +668,14 @@ button.login {
     background-position-y: 5px;
 }
 
+.date-icon {
+    background-image: url(../images/date.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 5px;
+    background-position-y: 5px;
+}
+
 #imagem img {
     width: auto;
     height: 100%;
