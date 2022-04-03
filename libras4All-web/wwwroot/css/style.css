@@ -592,6 +592,21 @@ p, label {
     margin-bottom: 25px;
 }
 
+.voltar button {
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background: white;
+    color: rgb(35, 36, 95);
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
 button.logout {
     width: 70%;
     height: 30px;
