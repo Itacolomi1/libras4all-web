@@ -106,7 +106,10 @@ $(".quantidade .maisCustomizadas").click(function () {
 
 function jogoEscolhido(jogo) {
     jogoSelecionado = jogo;
+      document.getElementById("txtjogo").value = jogo;
 }
+
+
 
 function verificarPerguntasSelecionadas() {
     return document.getElementById('txtQtdHistoria').textContent == "0" &&
