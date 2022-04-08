@@ -820,6 +820,7 @@ button.login {
     align-items: center;
     height: 80%;
     width: 550px;
+    max-width: 100%;
     border: none;
     border-radius: 25px;
     position: absolute;
@@ -1002,4 +1003,9 @@ button.login {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 800px) {
+    body {
+        zoom: 0.5;
+    }
 }
