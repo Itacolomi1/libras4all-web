@@ -4,6 +4,7 @@ body, html {
     margin: 0;
     font-family: "Open Sans", Sans-serif;
     font-size: 12px;
+    padding-bottom: 55px;
 }
 
 #alunos .esquerda p, #sala-visualizar .esquerda p {
@@ -280,6 +281,8 @@ tr {
     
     text-align: center;
 }
+
+
 
 input-search {
     border: 1px solid #CCC;
@@ -846,6 +849,11 @@ button.login {
     z-index: 1;
 }
 
+.footer {
+    height: 45px;
+    bottom: -50px;
+}
+
 #modal_quiz {
     position: absolute;
     background: rgb(35 36 95);
@@ -911,8 +919,12 @@ button.login {
         width: 100%;
         background: white;
         color: rgb(35, 36, 95);
-        margin: 10px;
+     
+        margin-top: 10px;
     }
+#span{
+    display:none;
+}
 
 
 #duvida_meteoro, #duvida_mestre {

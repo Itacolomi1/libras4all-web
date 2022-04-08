@@ -253,10 +253,13 @@ function carregarAlternativa(texto, alternativaCorreta) {
 }
 
 function cadastrarPergunta() {
-    if ($('#txtDescricaoPergunta').val().trim() == '' || $('#txtPrimeiraAlternativa').val().trim() == '' || $('#txtSegundaAlternativa').val().trim() == '' || $('#txtTerceiraAlternativa').val().trim() == '' || (!document.getElementById('primeira').checked && !document.getElementById('segunda').checked && !document.getElementById('terceira').checked)) {
+    if ($('#txtDescricaoPergunta').val().trim() == '' || $('#txtPrimeiraAlternativa').val().trim() == '' || $('#txtSegundaAlternativa').val().trim() == '' || $('#txtTerceiraAlternativa').val().trim() == '') {
         alert('Preencha todos os campos!')
     }
+    else if ((!document.getElementById('primeira').checked && !document.getElementById('segunda').checked && !document.getElementById('terceira').checked))
+            document.getElementById('span').style.display = 'block';
     else {
+        document.getElementById('span').style.display = 'none';
         var pergunta = {};
         pergunta.descricao = $('#txtDescricaoPergunta').val();
         pergunta.classe = "Customizada";
@@ -291,3 +294,4 @@ function cadastrarPergunta() {
             });
     }
 }
+
