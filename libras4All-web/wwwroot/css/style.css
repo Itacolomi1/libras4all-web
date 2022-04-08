@@ -782,6 +782,31 @@ button.login {
     background-position-y: 5px;
 }
 
+#eye, #eye2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+#exampleDropdownFormPassword1, #exampleDropdownFormPassword2 {
+    width: 100%;
+    margin-top: 0;
+    padding-right: 33px;
+}
+.engloba-senha {
+    position: relative;
+    width: 51% !important;
+    margin: auto;
+    height: 30px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+#redefinicao img{
+    border-color:green;
+}
+
 .square p {
     width: 100%;
     text-align: center;
