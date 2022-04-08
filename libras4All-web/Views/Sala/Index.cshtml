@@ -3,121 +3,121 @@
 *@
 @{
 }
-<div id='nova_sala'>
-    <input type="text" name="input" id="txtDescricao" placeholder="Digite o Nome da Sala...">
-    <div class="jogos">
-        <div id ="jogoQuiz" class="quiz" onclick="jogoEscolhido('Quiz')">
+    <div id='nova_sala'>
+        <input type="text" name="input" id="txtDescricao" placeholder="Digite o Nome da Sala...">
+        <h3>Selecione o jogo abaixo:</h3>
+        <div class="jogos">
+            <div id="jogoQuiz" class="quiz" onclick="jogoEscolhido('Quiz')">
+            </div>
+            <div id="jogoMeteoro" class="meteoro" onclick="jogoEscolhido('Meteoro')">
+                <div class="abrir_duvida_meteoro"></div>
+            </div>
+            <div id="jogoMestre" class="mestre" onclick="jogoEscolhido('Mestre Mandou')">
+                <div class="abrir_duvida_mestre"></div>
+            </div>
         </div>
-        <div id ="jogoMeteoro" class="meteoro" onclick="jogoEscolhido('Meteoro')">
-            <div class="abrir_duvida_meteoro"></div>
+        <div id="jogoSelecionado">
+            <div id="info">
+                <h2>Jogo selecionado:</h2>
+                <input readonly type="text" style="text-align:center" name="input" id="txtjogo">
+            </div>
+
         </div>
-        <div id ="jogoMestre" class="mestre" onclick="jogoEscolhido('Mestre Mandou')">
-            <div class="abrir_duvida_mestre"></div>
+        <button class="salvar" onclick="cadastrarSala()">Salvar</button>
+        <div id='duvida_meteoro'>
+            <button class="fechar">X</button>
+            <div class="explicacao">
+                <h1>Meteoro</h1>
+                <p>
+                    No jogo do meteoro temos 3 meteoros contendo 3 sinais de letra aleatoriamente escolhidas
+                    a partir do momento que o jogo começa os meteoros começam a cair, o jogador tem 20 segundos
+                    para selecionar no teclado as letras certas correspondentes aos sinais do meteoro, se o meteoro
+                    chegar na linha limite antes de você acertar o sinal, você perderá pontos do total, se acertar você
+                    ganha os pontos.
+                </p>
+            </div>
         </div>
-    </div>
-    <div id="jogoSelecionado">
-        <h3>Selecione o jogo acima</h3>
-        <div id="info">
-            <h2>Jogo selecionado:</h2>
-            <input readonly type="text" style="text-align:center" name="input" id="txtjogo" >
+        <div id='duvida_mestre'>
+            <button class="fechar">X</button>
+            <div class="explicacao">
+                <h1>O Mestre Mandou</h1>
+                <p>
+                    No jogo o mestre mandou é preciso ter acesso a câmera, será pedido para fazer um sinal,
+                    nosso algoritmo irá detectar se o sinal feito para câmera está correto ou não, caso atinja
+                    um minimo de 70% de acerto o sinal será considerado correto e os pontos serão contabilizado
+                    caso contrário o sinal será considerado incorreto.
+                </p>
+            </div>
         </div>
-        
-    </div>
-    <button class="salvar" onclick="cadastrarSala()">Salvar</button>
-    <div id='duvida_meteoro'>
-        <button class="fechar">X</button>
-        <div class="explicacao">
-            <h1>Meteoro</h1>
-            <p>
-                No jogo do meteoro temos 3 meteoros contendo 3 sinais de letra aleatoriamente escolhidas
-                a partir do momento que o jogo começa os meteoros começam a cair, o jogador tem 20 segundos
-                para selecionar no teclado as letras certas correspondentes aos sinais do meteoro, se o meteoro
-                chegar na linha limite antes de você acertar o sinal, você perderá pontos do total, se acertar você
-                ganha os pontos.
-            </p>
-        </div>
-    </div>
-    <div id='duvida_mestre'>
-        <button class="fechar">X</button>
-        <div class="explicacao">
-            <h1>O Mestre Mandou</h1>
-            <p>
-                No jogo o mestre mandou é preciso ter acesso a câmera, será pedido para fazer um sinal,
-                nosso algoritmo irá detectar se o sinal feito para câmera está correto ou não, caso atinja
-                um minimo de 70% de acerto o sinal será considerado correto e os pontos serão contabilizado
-                caso contrário o sinal será considerado incorreto.
-            </p>
-        </div>
-    </div>
-    <div id='modal_quiz'>
-        <button class="fechar">X</button>
-        <h1>Quiz</h1>
-        <div class="topicos">
-            <div id='nova_pergunta'>
-                <p> + Nova Pergunta</p>
+        <div id='modal_quiz'>
+            <button class="fechar">X</button>
+            <h1>Quiz</h1>
+            <div class="topicos">
+                <div id='nova_pergunta'>
+                    <p> + Nova Pergunta</p>
+
+                </div>
+                <div id='historia'>
+                    <p>História</p>
+                    <div class="quantidade">
+                        <button class="menos">-</button>
+                        <label id="txtQtdHistoria">0</label>
+                        <button class="maisHistoria">+</button>
+                    </div>
+                </div>
+                <div id='alfabeto'>
+                    <p>Alfabeto</p>
+                    <div class="quantidade">
+                        <button class="menos">-</button>
+                        <label id="txtQtdAlfabeto">0</label>
+                        <button class="maisAlfabeto">+</button>
+                    </div>
+                </div>
+                <div id='numerais'>
+                    <p>Numerais</p>
+                    <div class="quantidade">
+                        <button class="menos">-</button>
+                        <label id="txtQtdNumerais">0</label>
+                        <button class="maisNumerais">+</button>
+                    </div>
+                </div>
+                <div id='saudacoes'>
+                    <p>Saudações</p>
+                    <div class="quantidade">
+                        <button class="menos">-</button>
+                        <label id="txtQtdSaudacoes">0</label>
+                        <button class="maisSaudacoes">+</button>
+                    </div>
+                </div>
+                <div id='customizadas'>
+                    <p>Customizadas</p>
+                    <div class="quantidade">
+                        <button class="menos">-</button>
+                        <label id="txtQtdCustomizadas">0</label>
+                        <button class="maisCustomizadas">+</button>
+                    </div>
+                </div>
+                <div id='cadastrar_pergunta'>
+                    <h1>Nova Pergunta</h1>
+                    <input type="text" name="input" id="txtDescricaoPergunta" placeholder="Digite a Descrição...">
+                    <div class='pergunta'>
+                        <input type="radio" id="primeira" name="fav_language" value="primeira">
+                        <input type="text" id="txtPrimeiraAlternativa" name="input" placeholder="Digite a alternativa...">
+                    </div>
+                    <div class='pergunta'>
+                        <input type="radio" id="segunda" name="fav_language" value="segunda">
+                        <input type="text" id="txtSegundaAlternativa" name="input" placeholder="Digite a alternativa...">
+                    </div>
+                    <div class='pergunta'>
+                        <input type="radio" id="terceira" name="fav_language" value="terceira">
+                        <input type="text" id="txtTerceiraAlternativa" name="input" placeholder="Digite a alternativa...">
+                    </div>
+                    <span>Selecione a alternativa correta</span>
+                    <button class='salvar' onclick="cadastrarPergunta()">Salvar</button>
+                </div>
 
             </div>
-            <div id='historia'>
-                <p>História</p>
-                <div class="quantidade">
-                    <button class="menos">-</button>
-                    <label id="txtQtdHistoria">0</label>
-                    <button class="maisHistoria">+</button>
-                </div>
-            </div>
-            <div id='alfabeto'>
-                <p>Alfabeto</p>
-                <div class="quantidade">
-                    <button class="menos">-</button>
-                    <label id="txtQtdAlfabeto">0</label>
-                    <button class="maisAlfabeto">+</button>
-                </div>
-            </div>
-            <div id='numerais'>
-                <p>Numerais</p>
-                <div class="quantidade">
-                    <button class="menos">-</button>
-                    <label id="txtQtdNumerais">0</label>
-                    <button class="maisNumerais">+</button>
-                </div>
-            </div>
-            <div id='saudacoes'>
-                <p>Saudações</p>
-                <div class="quantidade">
-                    <button class="menos">-</button>
-                    <label id="txtQtdSaudacoes">0</label>
-                    <button class="maisSaudacoes">+</button>
-                </div>
-            </div>
-            <div id='customizadas'>
-                <p>Customizadas</p>
-                <div class="quantidade">
-                    <button class="menos">-</button>
-                    <label id="txtQtdCustomizadas">0</label>
-                    <button class="maisCustomizadas">+</button>
-                </div>
-            </div>
-            <div id='cadastrar_pergunta'>
-                <h1>Nova Pergunta</h1>
-                <input type="text" name="input" id="txtDescricaoPergunta" placeholder="Digite a Descrição...">
-                <div class='pergunta'>
-                    <input type="radio" id="primeira" name="fav_language" value="primeira">
-                    <input type="text" id="txtPrimeiraAlternativa" name="input" placeholder="Digite a alternativa...">
-                </div>
-                <div class='pergunta'>
-                    <input type="radio" id="segunda" name="fav_language" value="segunda">
-                    <input type="text" id="txtSegundaAlternativa" name="input" placeholder="Digite a alternativa...">
-                </div>
-                <div class='pergunta'>
-                    <input type="radio" id="terceira" name="fav_language" value="terceira">
-                    <input type="text" id="txtTerceiraAlternativa" name="input" placeholder="Digite a alternativa...">
-                </div>
-                <span>Selecione a alternativa correta</span>
-                <button class='salvar' onclick="cadastrarPergunta()">Salvar</button>
-            </div>
-           
-        </div>
 
+        </div>
     </div>
-</div>
 <script src="./js/novaSala.js"></script>

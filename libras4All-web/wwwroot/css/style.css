@@ -148,12 +148,15 @@ li.activo {
 
 .jogos .quiz {
     background-image: url("../images/quiz.png");
+}
+#nova_sala .jogos .quiz {
+    background-image: url("../images/quiz.png");
     border-radius: 10px;
 }
 
 .flyer img {
     float: left;
-    width: 100%;   
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -269,7 +272,7 @@ tr {
     font-size: 13px;
 }
 #info h2 {
-    text-align: left;
+    text-align: center;
     font-size: 15px;
 }
 

@@ -16,3 +16,17 @@
     });
 
 });
+
+
+function validaSenhas() {
+
+    var senha1 = $('exampleDropdownFormPassword1').text;
+    var senha2 = $('exampleDropdownFormPassword2').text;
+
+    if (senha1 == senha2)
+        SalvaNovaSenha();
+}
+
+function SalvaNovaSenha() {
+
+}
