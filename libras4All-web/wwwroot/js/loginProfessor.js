@@ -29,3 +29,26 @@
             location.reload();
         });
 }
+
+function enviarEmail() {
+    var url = "https://libras4all.herokuapp.com/api/email";
+    var txtEmail = $('#txtEmail').val();
+    var flag = false;
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        data:
+        {
+            email: txtEmail,
+            isMobile: flag
+        },
+        cache: false
+    })
+        .done(function (data) {
+            alert("Caso exista uma conta com o email informado, iremos enviar as instruções para a troca de senha.");
+        })
+        .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+            alert("Erro ao pedir para redefinir a senha.");
+        });
+}

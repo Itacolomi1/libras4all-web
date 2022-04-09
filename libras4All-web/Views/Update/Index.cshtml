@@ -1,41 +1,37 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     Layout = null;
 }
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Libras4all - Redefinir Senha</title>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link href="~/css/style.css" rel="stylesheet" />
-        <link rel="icon" type="imagem/jpg" href="~/icon.jpg" />
-    </head>
-    <div id='cadastro'>        
-        <div class="square">           
-            <h1>Redefinição de senha</h1>
-            <div id="redefinicao">
-                <div class="engloba-senha">
-                    <input type="password" class="senha-icon" id="exampleDropdownFormPassword1" placeholder="Digite uma nova senha" />
-                    <img src="./images/olho.png" id="eye" WIDTH="30" HEIGHT="30">
-                </div>
-                <div class="engloba-senha">
-                    <input type="password" class="senha-icon" id="exampleDropdownFormPassword2" placeholder="Confirme a nova senha" />
-                    <img src="./images/olho.png" id="eye2" WIDTH="30" HEIGHT="30">
-                </div>
-                </div>
-                <div>
-                    <button @*onclick=""*@ type="button">Salvar</button>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libras4all - Redefinir Senha</title>
 
-                </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="icon" type="imagem/jpg" href="~/icon.jpg" />
+</head>
+<div id='cadastro'>
+    <div class="square">
+        <h1>Redefinição de senha</h1>
+        <div id="redefinicao" style="display: none;">
+            <div class="engloba-senha">
+                <input type="password" class="senha-icon" id="exampleDropdownFormPassword1" placeholder="Digite uma nova senha" />
+                <img src="./images/olho.png" id="eye" WIDTH="30" HEIGHT="30">
             </div>
-
+            <div class="engloba-senha">
+                <input type="password" class="senha-icon" id="exampleDropdownFormPassword2" placeholder="Confirme a nova senha" />
+                <img src="./images/olho.png" id="eye2" WIDTH="30" HEIGHT="30">
+            </div>
+        </div>
+        <div id="divSalvar" style="display: none;">
+            <button onclick="redefinirSenha()" type="button">Salvar</button>
+        </div>
     </div>
 
-    <script src="./js/redefenirSenha.js"></script>
+</div>
+
+<script src="./js/redefenirSenha.js"></script>
