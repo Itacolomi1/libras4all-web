@@ -22,11 +22,18 @@
 
             localStorage.setItem('user_id', JSON.stringify(data._id));
             window.location = "https://libras4all-web.herokuapp.com/Home";
-            //window.location = "https://localhost:44319/Home";
+           
 
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Usuário ou Senha inválido");
-            location.reload();
+            swal({
+                title: "Ops!",
+                text: "Usuário ou Senha inválido",
+                icon: "error",
+                button: "OK!",
+            }).then(() => {
+                location.reload();
+            }); 
+           
         });
 }
 
@@ -46,9 +53,24 @@ function enviarEmail() {
         cache: false
     })
         .done(function (data) {
-            alert("Caso exista uma conta com o email informado, iremos enviar as instruções para a troca de senha.");
+
+            swal({
+                title: "Atenção!",
+                text: "Caso exista uma conta com o email informado, iremos enviar as instruções para a troca de senha.",
+                icon: "warning",
+                button: "OK!",
+            });  
+           // alert("Caso exista uma conta com o email informado, iremos enviar as instruções para a troca de senha.");
         })
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Erro ao pedir para redefinir a senha.");
+            //alert("Erro ao pedir para redefinir a senha.");
+            swal({
+                title: "Atenção!",
+                text: "Erro ao pedir para redefinir a senha.",
+                icon: "error",
+                button: "OK!",
+            }).then(() => {
+                window.location = "https://libras4all-web.herokuapp.com/Login";
+            });
         });
 }

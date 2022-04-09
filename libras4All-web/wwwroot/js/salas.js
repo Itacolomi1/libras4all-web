@@ -2,9 +2,16 @@
 
 $(document).ready(function () {
 
-    if (localStorage.getItem('user_token') == null) {
-        alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
-        window.location = "https://libras4all-web.herokuapp.com/Login";
+    if (localStorage.getItem('user_token') == null || localStorage.getItem('user_id') == null) {
+        swal({
+            title: "Atenção!",
+            text: "Você precisa estar logado para acessar esta página",
+            icon: "warning",
+            button: "OK!",
+        }).then(() => {
+            window.location = "https://libras4all-web.herokuapp.com/Login";
+        });
+
     }
 
     var id = localStorage.getItem('user_id').replaceAll("\"", "");

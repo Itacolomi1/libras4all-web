@@ -8,9 +8,18 @@ var quantidadePerguntas = [];
 
 
 $(document).ready(function () {
-    if (localStorage.getItem('user_token') == null) {
-        alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
-        window.location = "https://libras4all-web.herokuapp.com/Login";
+
+    if (localStorage.getItem('user_token') == null || localStorage.getItem('user_id') == null) {
+        swal({
+            title: "Atenção!",
+            text: "Você precisa estar logado para acessar está página",
+            icon: "warning",
+            button: "OK!",
+        }).then(() => {
+            window.location = "https://libras4all-web.herokuapp.com/Login";
+        });
+        //alert("ATENÇÃO!! ");
+
     }
 
     id = localStorage.getItem('user_id').replaceAll("\"", "");
@@ -121,7 +130,12 @@ function verificarPerguntasSelecionadas() {
 
 function cadastrarSala() {
     if ($('#txtDescricao').val().trim() == undefined || $('#txtDescricao').val().trim() == null || $('#txtDescricao').val().trim() == '' || jogoSelecionado == null || (jogoSelecionado == "Quiz" && verificarPerguntasSelecionadas())) {
-        alert('Preencha todos os campos!')
+        swal({
+
+            text: "Preencha todos os campos",
+            icon: "error",
+            confirmButtonText: "OK!",
+        })
     }
     else {
         var sala = {};
@@ -172,9 +186,21 @@ function cadastrarQuiz(idSala) {
         cache: false
     })
         .done(function (data) {
-            alert("Sala cadastrada com sucesso!");
+            swal({
+
+                text: "Sala cadastrada com sucesso!",
+                icon: "success",
+                confirmButtonText: "OK!",
+            })
+         
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Erro ao cadastrar o quiz!");
+          //  alert("Erro ao cadastrar o quiz!");
+            swal({
+
+                text: "Erro ao cadastrar a sala com jogo quiz",
+                icon: "error",
+                confirmButtonText: "OK!",
+            })
         });
 }
 
@@ -211,9 +237,21 @@ function cadastrarMeteoro(idSala) {
         cache: false
     })
         .done(function (data) {
-            alert("Sala cadastrada com sucesso!");
+            //alert("Sala cadastrada com sucesso!");
+            swal({
+
+                text: "Sala cadastrada com sucesso!",
+                icon: "success",
+                confirmButtonText: "OK!",
+            })
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Erro ao cadastrar o meteoro!");
+            //alert("Erro ao cadastrar o meteoro!");
+            swal({
+
+                text: "Erro ao cadastrar a sala com jogo meteoro",
+                icon: "error",
+                confirmButtonText: "OK!",
+            })
         });
 }
 
@@ -231,9 +269,21 @@ function cadastrarMestreMandou(idSala) {
         cache: false
     })
         .done(function (data) {
-            alert("Sala cadastrada com sucesso!");
+           // alert("Sala cadastrada com sucesso!");
+            swal({
+
+                text: "Sala cadastrada com sucesso!",
+                icon: "success",
+                confirmButtonText: "OK!",
+            })
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Erro ao cadastrar o Mestre Mandou!");
+            //alert("Erro ao cadastrar o Mestre Mandou!");
+            swal({
+
+                text: "Erro ao cadastrar a sala com jogo mestre mandou",
+                icon: "error",
+                confirmButtonText: "OK!",
+            })
         });
 }
 
@@ -254,7 +304,12 @@ function carregarAlternativa(texto, alternativaCorreta) {
 
 function cadastrarPergunta() {
     if ($('#txtDescricaoPergunta').val().trim() == '' || $('#txtPrimeiraAlternativa').val().trim() == '' || $('#txtSegundaAlternativa').val().trim() == '' || $('#txtTerceiraAlternativa').val().trim() == '') {
-        alert('Preencha todos os campos!')
+        swal({
+
+            text: "Preencha todos os campos",
+            icon: "error",
+            confirmButtonText: "OK!",
+        })
     }
     else if ((!document.getElementById('primeira').checked && !document.getElementById('segunda').checked && !document.getElementById('terceira').checked))
             document.getElementById('span').style.display = 'block';
@@ -288,9 +343,21 @@ function cadastrarPergunta() {
                 document.getElementById('segunda').checked = false;
                 document.getElementById('terceira').checked = false;
 
-                alert("Pergunta cadastrada com sucesso!");
+          
+                swal({
+
+                    text: "Pergunta cadastrada com sucesso!",
+                    icon: "success",
+                    confirmButtonText: "OK!",
+                })
             }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
-                alert("Erro ao cadastrar a pergunta!");
+                //alert("Erro ao cadastrar a pergunta!");
+                swal({
+
+                    text: "Erro ao cadastrar a pergunta!",
+                    icon: "error",
+                    confirmButtonText: "OK!",
+                })
             });
     }
 }

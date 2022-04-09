@@ -49,9 +49,21 @@ function editarSala() {
         }
     })
         .done(function (data) {
-            alert("Sala editada com sucesso!");
+            //alert("Sala editada com sucesso!");
+            swal({
+
+                text: "Sala editada com sucesso!",
+                icon: "success",
+                confirmButtonText: "OK!",
+            })
 
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Erro ao editar a sala!");
+          //  alert("Erro ao editar a sala!");
+            swal({
+
+                text: "Erro ao editar a sala",
+                icon: "error",
+                confirmButtonText: "OK!",
+            })
         });
 }

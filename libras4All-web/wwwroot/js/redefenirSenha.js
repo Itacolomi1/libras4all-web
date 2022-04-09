@@ -56,7 +56,12 @@ function redefinirSenha() {
         atualizarSenha();
     }
     else {
-        alert("As senhas precisam ser a mesma!");
+        swal({
+
+            text: "AS senhas precisam ser iguais.",
+            icon: "error",
+            confirmButtonText: "OK!",
+        })
     }
 }
 
@@ -77,10 +82,23 @@ function atualizarSenha() {
         cache: false
     })
         .done(function (data) {
-            alert("Senha redefinida com sucesso!");
-            window.location = "https://libras4all-web.herokuapp.com/Login";
+            swal({
+                title: "Atenção!",
+                text: "Senha alterada com sucesso",
+                icon: "warning",
+                button: "OK!",
+            }).then(() => {
+                window.location = "https://libras4all-web.herokuapp.com/Login";
+
+            });  
         })
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-            alert("Erro ao redefinir a senha!");
+        
+            swal({
+                title: "Atenção!",
+                text: "Erro ao alterar a senha",
+                icon: "error",
+                button: "OK!",
+            });  
         });
 }
