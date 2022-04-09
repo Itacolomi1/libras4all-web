@@ -185,7 +185,7 @@ function preencherPerguntas() {
     jsonPerguntas.push(preencherQuantidadePerguntas('Alfabeto', document.getElementById('txtQtdAlfabeto').textContent));
     jsonPerguntas.push(preencherQuantidadePerguntas('Numerais', document.getElementById('txtQtdNumerais').textContent));
     jsonPerguntas.push(preencherQuantidadePerguntas('Saudações', document.getElementById('txtQtdSaudacoes').textContent));
-    jsonPerguntas.push(preencherQuantidadePerguntas('Customizadas', document.getElementById('txtQtdCustomizadas').textContent));
+    jsonPerguntas.push(preencherQuantidadePerguntas('Customizada', document.getElementById('txtQtdCustomizadas').textContent));
 
     return jsonPerguntas;
 }
