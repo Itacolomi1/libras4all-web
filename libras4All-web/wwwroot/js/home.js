@@ -3,7 +3,7 @@ var id;
 var url = "https://libras4all.herokuapp.com/api/sala/listarSalasProfessor/";
 
 $(document).ready(function () {
-    debugger;
+   
     if (localStorage.getItem('user_token') == null || localStorage.getItem('user_id') == null ) {
         alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
         window.location = "https://libras4all-web.herokuapp.com/Login";
@@ -21,10 +21,14 @@ $(document).ready(function () {
         }
     })
         .done(function (data) {
+            console.log(data);
+            debugger;
             $('#tbSalasAtivas').DataTable({
                 dom: "Bfrtip",
                 "columnDefs": [
-                    { "width": "50%", "targets": 1 }
+                    {
+                        "width": "50%", "targets": 1, "defaultContent": "-",
+                        "targets": "_all" }
                 ],
                 bFilter: false,
                 bInfo: false,
@@ -43,6 +47,13 @@ $(document).ready(function () {
                     { data: "codigo" },
                     { data: "descricao" },
                     { data: "tipoJogo" },
+                    {
+                        data: function (data, type, row) {
+                            return '<a href="Editar?Id=' + data._id + '">' +
+                                '<img style="width: 30px;" src="./images/editar.png"></img>' +
+                                '</a> ';
+                        }
+                    },
                 ],
             });
         });

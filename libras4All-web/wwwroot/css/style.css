@@ -97,6 +97,8 @@ li.activo {
     height: 250px;
 }
 
+
+
 #nova_sala {
     display: flex;
     flex-wrap: wrap;
@@ -392,11 +394,12 @@ table.tabelaSala {
     width: 44%;
 }
 
-#alunos .cima, #sala-visualizar .cima{
+#alunos .cima, #sala-visualizar .cima {
     width: 100%;
     border-style: solid;
     border-color: #154C79;
     border-radius: 20px;
+    height: 90%;
 }
 
 #sala-visualizar .cima{
@@ -423,6 +426,10 @@ table.tabelaSala {
     border-radius: 20px;
 }
 
+@font-face {
+    font-family: game;
+    src: url(../fonts/font.ttf);
+}
 
 #alunos, #sala-visualizar {
     margin-top: 20px;
@@ -434,11 +441,53 @@ table.tabelaSala {
     height: 100%;
 }
 
-    #sala-visualizar h1, #sala-editar h1, #alunos h1 {
-        font-size: 20px;
+#sala-editar p {
+    font-size: 17px;
+    text-align: center;
+}
+
+    #sala-visualizar h1, #sala-editar h1 {
+        font-size: 35px;
         text-align: center;
         font-weight: bold;
         width: 100%;
+        font-family: game;
+        
+    }
+
+
+#sala-editar h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+#jogo h1 {
+    font-size: 20px;
+    font-family: Arial;
+    margin-left: 20px;
+    text-align: left;
+    position: absolute;
+}
+
+#jogo {
+    width: 70%;
+    margin: 0 auto;
+}
+
+    #jogo h2 {
+        font-size: 20px !important;        
+        font-family: Arial;
+        margin-left: 20px;
+        text-align: right !important;
+    }
+
+    #sala-editar h3 {
+        font-size: 17px !important;
+        font-family: Arial;
+        margin-left: 20px;
+        text-align: center;
     }
 
 #sala-editar h2 {
@@ -451,6 +500,10 @@ table.tabelaSala {
 #sala-editar .status {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.status label{
+    font-size:15px;
 }
 
 #perfil label {
@@ -526,8 +579,8 @@ p, label {
     border-style: solid;
     border-color: #154C79;
     border-radius: 20px;
-   
-    margin-right:10px
+    height: 90%;
+    margin-right: 10px
 }
 
 #jogoMeteoro:hover, #jogoQuiz:hover, #jogoMestre:hover {
@@ -826,6 +879,11 @@ button.login {
 }
 #redefinicao img{
     border-color:green;
+}
+
+#sala-editar .status {
+    text-align: center;
+}
 }
 
 .square p {
