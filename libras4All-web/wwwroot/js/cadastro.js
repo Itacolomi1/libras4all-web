@@ -1,12 +1,15 @@
 
 function alerta() {
-   
+    
     swal({
         title: "Atenção!",
         text: "Em caso de necessidade de recuperação de senha você precisa ter acesso ao email informado nesse campo",
         icon: "warning",
         button: "OK!",
-    })
+    }).then(() => {
+        $("#exampleDropdownFormEmail1").focus();
+    });   
+   
 }
     
 
@@ -37,7 +40,7 @@ function validaCampos(nome, email, senha, data) {
 
     else {
         
-        return validarEmail(email);
+        return true;
     }
 }
        
@@ -50,43 +53,66 @@ function cadastrarUsuario() {
     var dataNascimento = document.getElementById('exampleDropdownFormDate1').value;
 
     if (validaCampos(nome, email, senha, dataNascimento)) {
-        if (validaCheck()) {
-            var url = "https://libras4all.herokuapp.com/api/professor";    
 
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: { nome: nome, email: email, senha: senha, dataNascimento: dataNascimento },
-                cache: false
-            })
-                .done(function (data) {
-                    swal({
-                        
-                        text: "Usuário cadastrado com sucesso",
-                        icon: "success",
-                        confirmButtonText: "OK!",
-                    })
+        if (validarEmail(email)) {
+            if (validaCheck()) {
+                var url = "https://libras4all.herokuapp.com/api/professor";
 
-                    window.location = "https://libras4all-web.herokuapp.com/Login";
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: { nome: nome, email: email, senha: senha, dataNascimento: dataNascimento },
+                    cache: false
                 })
-                .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                    .done(function (data) {
+                        swal({
 
-                   // alert("Erro ao cadastrar usuário.");
-                    swal({
+                            text: "Usuário cadastrado com sucesso",
+                            icon: "success",
+                            confirmButtonText: "OK!",
+                        })
 
-                        text: "Erro ao cadastrar usuário.",
-                        icon: "error",
-                        confirmButtonText: "OK!",
+                        window.location = "https://libras4all-web.herokuapp.com/Login";
                     })
-                });
+                    .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+
+                        // alert("Erro ao cadastrar usuário.");
+                        swal({
+
+                            text: "Erro ao cadastrar usuário.",
+                            icon: "error",
+                            confirmButtonText: "OK!",
+                        })
+                    });
+            }
+            else {
+
+                // alert("É necessário aceitar os termos para se cadastrar");
+                swal({
+
+                    text: "É necessário aceitar os termos para se cadastrar",
+                    icon: "error",
+                    confirmButtonText: "OK!",
+                })
+            }
         }
         else {
+            swal({
 
-            alert("É necessário aceitar os termos para se cadastrar");
+                text: "Digite um email válido",
+                icon: "error",
+                confirmButtonText: "OK!",
+            })
         }
     }
     else {
-        alert("Preencha todos os campos corretamente");
+       // alert("Preencha todos os campos corretamente");
+        swal({
+
+            text: "É necessário preencher todos os campos",
+            icon: "error",
+            confirmButtonText: "OK!",
+        })
     }
 }
 
