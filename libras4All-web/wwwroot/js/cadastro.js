@@ -1,3 +1,16 @@
+
+function alerta() {
+   
+    swal({
+        title: "Atenção!",
+        text: "Em caso de necessidade de recuperação de senha você precisa ter acesso ao email informado nesse campo",
+        icon: "warning",
+        button: "OK!",
+    })
+}
+    
+
+
 function validaCheck() {
 
     var resposta = document.getElementById('checkboxp');  
@@ -28,13 +41,12 @@ function validaCampos(nome, email, senha, data) {
     }
 }
        
-
 function cadastrarUsuario() {
 
 
     var nome = $('#exampleDropdownFormNome1').val();
     var email = $('#exampleDropdownFormEmail1').val();
-    var senha = $('#exampleDropdownFormPassword1').val();
+    var senha = $('#exampleDropdownFormPassword3').val();
     var dataNascimento = document.getElementById('exampleDropdownFormDate1').value;
 
     if (validaCampos(nome, email, senha, dataNascimento)) {
@@ -48,12 +60,24 @@ function cadastrarUsuario() {
                 cache: false
             })
                 .done(function (data) {
-                    alert("Usuário cadastrado com sucesso");
+                    swal({
+                        
+                        text: "Usuário cadastrado com sucesso",
+                        icon: "success",
+                        confirmButtonText: "OK!",
+                    })
+
                     window.location = "https://libras4all-web.herokuapp.com/Login";
                 })
                 .fail(function (XMLHttpRequest, textStatus, errorThrown) {
 
-                    alert("Erro ao cadastrar usuário.");
+                   // alert("Erro ao cadastrar usuário.");
+                    swal({
+
+                        text: "Erro ao cadastrar usuário.",
+                        icon: "error",
+                        confirmButtonText: "OK!",
+                    })
                 });
         }
         else {
@@ -65,3 +89,5 @@ function cadastrarUsuario() {
         alert("Preencha todos os campos corretamente");
     }
 }
+
+

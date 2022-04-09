@@ -8,10 +8,14 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Libras4all - Cadastro</title>
-        <script src="./js/cadastro.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./js/cadastro.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.4.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link href="~/css/style.css" rel="stylesheet" />
@@ -23,8 +27,8 @@
             <div>
                 <input type="text" class="user-icon" id="exampleDropdownFormNome1" placeholder="Nome" />
                 <input type="date" class="date-icon" id="exampleDropdownFormDate1" placeholder="Data de Nascimento" />
-                <input type="text" class="email-icon" id="exampleDropdownFormEmail1" placeholder="Email" />
-                <input type="password" class="senha-icon" id="exampleDropdownFormPassword1" placeholder="Senha" />
+                <input type="text" class="email-icon" id="exampleDropdownFormEmail1" placeholder="Email" onclick="alerta()" />
+                <input type="password" class="senha-icon" id="exampleDropdownFormPassword3" placeholder="Senha" />
                 
                 <div id="privacy">
                     <label>

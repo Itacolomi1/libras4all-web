@@ -801,6 +801,12 @@ button.login {
     margin-top: 0;
     padding-right: 33px;
 }
+
+#exampleDropdownFormPassword3 {
+    width: 51%;
+    margin-top: 0;
+    padding-right: 33px;
+}
 .engloba-senha {
     position: relative;
     width: 51% !important;
