@@ -807,6 +807,15 @@ button.login {
     margin-top: 0;
     padding-right: 33px;
 }
+
+.swal-modal{
+    width:30%;
+
+}
+
+.swal-text{
+    text-align:justify !important;
+}
 .engloba-senha {
     position: relative;
     width: 51% !important;
