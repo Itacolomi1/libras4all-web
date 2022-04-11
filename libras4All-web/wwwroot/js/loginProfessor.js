@@ -59,8 +59,10 @@ function enviarEmail() {
                 text: "Caso exista uma conta com o email informado, iremos enviar as instruções para a troca de senha.",
                 icon: "warning",
                 button: "OK!",
-            });  
-           // alert("Caso exista uma conta com o email informado, iremos enviar as instruções para a troca de senha.");
+            }).then(() => {
+                window.location = "https://libras4all-web.herokuapp.com/Login";
+            }); 
+           
         })
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
             //alert("Erro ao pedir para redefinir a senha.");
