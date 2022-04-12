@@ -819,6 +819,14 @@ button.login {
     background-size: 70px;
 }
 
+#imagem-logo {
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
 .email-icon {
     background-image: url(../images/email.png);
     background-repeat: no-repeat;

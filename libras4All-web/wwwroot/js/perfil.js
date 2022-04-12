@@ -32,6 +32,8 @@ $(document).ready(function () {
         .done(function (data) {
             $('#lbNome').text(data.nome);
             $('#lbEmail').text(data.email);
+            var dataFormatada = (data.dataNascimento).replace(/(\d*)-(\d*)-(\d*).*/, '$3-$2-$1');
+            $('#ldData').text(dataFormatada);
         });
 });
 
