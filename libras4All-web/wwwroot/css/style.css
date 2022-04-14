@@ -643,6 +643,19 @@ p, label {
    
     width: 3%;
 }
+#privacy a {
+    margin-left: 5;
+}
+#privacy label {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#checkboxp {
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 #sala-visualizar .direita {
     width: 100%;
     height: 54%;
@@ -685,7 +698,7 @@ p, label {
 }
 
 .voltar button {
-    width: 20%;
+    width: 50%;
     height: 30px;
     border-radius: 10px;
     font-family: "Open Sans", Sans-serif;
@@ -900,6 +913,9 @@ button.login {
     width: 100%;
     text-align: center;
     color: white;
+}
+#cadastro .square {
+    height: calc(100% - 55px);
 }
 
 .square {
