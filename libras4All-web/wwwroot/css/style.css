@@ -398,7 +398,7 @@ table.tabelaSala {
     width: 100%;
     border-style: solid;
     border-color: #154C79;
-    border-radius: 20px;
+    border-radius: 5px;
     height: 90%;
 }
 
@@ -423,7 +423,7 @@ table.tabelaSala {
     border-style: solid;
     border-color: #154C79;
     margin-right: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 @font-face {
@@ -451,7 +451,7 @@ table.tabelaSala {
         text-align: center;
         font-weight: bold;
         width: 100%;
-        font-family: game;
+        
         
     }
 
@@ -577,10 +577,21 @@ p, label {
     height: 50%;
 }
 
+#imagemRanking img {
+    width: 5%;
+    height: 5%;
+    margin-left: 310px;
+}
+#imagemRanking {
+    width: 100%;
+    position: absolute;
+    float: left;
+}
+
 #divGrafico {
     border-style: solid;
     border-color: #154C79;
-    border-radius: 20px;
+    border-radius: 5px;
     height: 90%;
     margin-right: 10px
 }
@@ -610,7 +621,7 @@ p, label {
     height: 45%;
     border-style: solid;
     border-color: #154C79;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 #jogoSelecionado input {
@@ -623,7 +634,7 @@ p, label {
     height: 35%;
     border-style: solid;
     border-color: #154C79;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 #alunos .direita{
     width: 100%;

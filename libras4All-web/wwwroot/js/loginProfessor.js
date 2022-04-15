@@ -10,7 +10,7 @@
         data: usuario,
         beforeSend: function () {
             
-            $("#logar").html("<img id='loadingLogin' src='./images/load.gif'>");
+            $("#logar").html("<img id='loadingLogin' src='./images/loadingg.gif'>");
             
         },
         cache: false

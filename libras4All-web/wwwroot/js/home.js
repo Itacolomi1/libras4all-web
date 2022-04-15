@@ -29,7 +29,7 @@ $(document).ready(function () {
     })
         .done(function (data) {
             console.log(data);
-            debugger;
+            
             $('#tbSalasAtivas').DataTable({
                 dom: "Bfrtip",
                 "columnDefs": [

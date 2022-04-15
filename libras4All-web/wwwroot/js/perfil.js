@@ -4,8 +4,8 @@ var id;
 var token;
 
 $(document).ready(function () {
-    
-   
+
+
     if (localStorage.getItem('user_token') == null || localStorage.getItem('user_id') == null) {
         swal({
             title: "Atenção!",
@@ -16,8 +16,8 @@ $(document).ready(function () {
             window.location = "https://libras4all-web.herokuapp.com/Login";
         });
 
-    }  
-    
+    }
+
     id = localStorage.getItem('user_id').replaceAll("\"", "");
     token = localStorage.getItem('user_token').replaceAll("\"", "");
 
@@ -39,9 +39,6 @@ $(document).ready(function () {
 
 
 function Logout() {
-    debugger;
-    var x;
-    //var r = confirm("Deseja realmente sair?");
 
     swal({
         title: "Deseja realmente sair?",
@@ -56,18 +53,10 @@ function Logout() {
             window.localStorage.clear();
             window.location = "https://libras4all-web.herokuapp.com/Login";
 
-            } else {
+        } else {
             window.location = "https://libras4all-web.herokuapp.com/Perfil";
         }
     });
 
-   
-    //if (r == true) {
-    //    window.localStorage.clear();
-    //    window.location = "https://libras4all-web.herokuapp.com/Login";
-    //}
-    //else {
-    //    window.location = "https://libras4all-web.herokuapp.com/Perfil";
-    //}
-   
+
 }
