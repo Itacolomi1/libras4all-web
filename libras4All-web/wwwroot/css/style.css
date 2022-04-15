@@ -981,11 +981,36 @@ button.login {
         top: 10px;
     }
 
-    #modal_quiz h1 {
-        color: white;
+
+    #modal_quiz .confirma button {
+        width: 50%;
+        height: 35px;
+        border-radius: 10px;
+        font-family: "Open Sans", Sans-serif;
+        font-size: 12px;
         text-transform: uppercase;
-        margin-top: 30px;
+        font-weight: bold;
+        border: none;
+        background: white;
+        color: rgb(35, 36, 95);
+        margin-bottom: 0;
+        margin-top: 20px;
     }
+
+        #modal_quiz .confirma button:hover {
+            background: #037ca9;
+            border: none;
+            color: white;
+        }
+#nova_pergunta {
+    cursor: pointer;
+}
+
+#modal_quiz h1 {
+    color: white;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
 
     #modal_quiz #nova_pergunta, #modal_quiz #historia, #modal_quiz #numerais, #modal_quiz #saudacoes, #modal_quiz #alfabeto, #modal_quiz #customizadas {
         background: white;
@@ -1076,7 +1101,7 @@ button.login {
 
 #cadastrar_pergunta h1 {
     color: white;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
     text-transform: none;

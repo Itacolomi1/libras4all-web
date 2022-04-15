@@ -53,10 +53,6 @@
             <button class="fechar">X</button>
             <h1>Quiz</h1>
             <div class="topicos">
-                <div id='nova_pergunta'>
-                    <p> + Nova Pergunta</p>
-
-                </div>
                 <div id='historia'>
                     <p>História</p>
                     <div class="quantidade">
@@ -97,6 +93,11 @@
                         <button class="maisCustomizadas">+</button>
                     </div>
                 </div>
+                <div id='nova_pergunta'>
+                    <p> + Nova Pergunta</p>
+
+                </div>
+
                 <div id='cadastrar_pergunta'>
                     <h1>Nova Pergunta</h1>
                     <input type="text" name="input" id="txtDescricaoPergunta" placeholder="Digite a Descrição...">
@@ -115,12 +116,14 @@
                     <div id="span">
                         <span>Selecione a alternativa correta</span>
                     </div>
-                    
-                    <button class='salvar' onclick="cadastrarPergunta()">Salvar</button>
+
+                    <button class='salvar' onclick="cadastrarPergunta()">Salvar Pergunta</button>
                 </div>
 
             </div>
-
+            <div class="confirma">
+                <button>OK</button>
+            </div>
         </div>
     </div>
 <script src="./js/novaSala.js"></script>

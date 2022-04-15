@@ -111,6 +111,14 @@ $(".quantidade .maisCustomizadas").click(function () {
         var valorfinal = parseInt(valor) + 1;
         $(this).parent().find("label").text(valorfinal);
     }
+    else {
+        swal({
+
+            text: "Não há quantidade suficiente de perguntas customizadas cadastradas.",
+            icon: "error",
+            confirmButtonText: "OK!",
+        })
+    }
 });
 
 function jogoEscolhido(jogo) {
@@ -170,6 +178,7 @@ function cadastrarItens(idSala) {
         cadastrarMestreMandou(idSala);
     }
 }
+
 
 function cadastrarQuiz(idSala) {
     var quiz = {};
@@ -350,6 +359,7 @@ function cadastrarPergunta() {
                     icon: "success",
                     confirmButtonText: "OK!",
                 })
+            
             }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
                 //alert("Erro ao cadastrar a pergunta!");
                 swal({

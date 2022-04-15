@@ -66,5 +66,9 @@ $(".fechar").click(function () {
     $(".fundo_modal").css("display", "none");
 });
 
+$(".confirma").click(function () {
+    $(this).parent().css("display", "none");
+    $(".fundo_modal").css("display", "none");
+});
  
 
