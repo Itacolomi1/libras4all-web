@@ -192,7 +192,7 @@ button.salvar {
 
 #sala-editar button.salvar {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border: none;
     border-radius: 10px;
     font-family: "Open Sans", Sans-serif;
@@ -545,7 +545,8 @@ p, label {
 
 .codigo-sala p {
     font-weight: bold;
-    margin: 0px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 #ranking {
