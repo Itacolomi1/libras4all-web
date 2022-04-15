@@ -49,7 +49,7 @@ async function AdicionaLista(alunos, token) {
             },
             beforeSend: function () {
                 
-                $("#tabelaAlunos").html("<img id='loading' src='./images/load.gif'>");
+                $("#tabelaAlunos").html("<img id='loading' src='./images/loadingg.gif'>");
 
             },
             success: function (retorno) {
