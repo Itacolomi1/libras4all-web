@@ -872,17 +872,17 @@ button.login {
     margin: auto;
 
 }
-#exampleDropdownFormPassword1, #exampleDropdownFormPassword2 {
+#exampleDropdownFormPassword1, #exampleDropdownFormPassword2, #exampleDropdownFormPassword3, #exampleDropdownFormPassword4 {
     width: 100%;
     margin-top: 0;
     padding-right: 33px;
 }
 
-#exampleDropdownFormPassword3 {
+/*#exampleDropdownFormPassword3 {
     width: 51%;
     margin-top: 0;
     padding-right: 33px;
-}
+}*/
 
 .swal-modal{
     width:30%;

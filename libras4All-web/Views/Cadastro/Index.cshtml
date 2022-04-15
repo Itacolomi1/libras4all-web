@@ -27,9 +27,16 @@
             <div>
                 <input type="text" class="user-icon" id="exampleDropdownFormNome1" placeholder="Nome" />
                 <input type="text" class="date-icon" id="exampleDropdownFormDate1" placeholder="Data de nascimento" onfocus="(this.type='date')" />
-                <input type="text" class="email-icon" id="exampleDropdownFormEmail1" placeholder="Email" onclick="alerta()"/>
-                <input type="password" class="senha-icon" id="exampleDropdownFormPassword3" placeholder="Senha" />
-                
+                <input type="text" class="email-icon" id="exampleDropdownFormEmail1" placeholder="Email" onclick="alerta()" />
+                <div class="engloba-senha">
+                    <input type="password" class="senha-icon" id="exampleDropdownFormPassword3" placeholder="Digite uma nova senha" />
+                    <img src="./images/olho.png" id="eye" WIDTH="30" HEIGHT="30">
+                </div>
+                <div class="engloba-senha">
+                    <input type="password" class="senha-icon" id="exampleDropdownFormPassword4" placeholder="Confirme a nova senha" />
+                    <img src="./images/olho.png" id="eye2" WIDTH="30" HEIGHT="30">
+                </div>
+
                 <div id="privacy">
                     <label>
                         <input type="checkbox" data-privacy="true" name="communications" id="checkboxp" value="1">
@@ -38,7 +45,7 @@
 
                     </label>
                 </div>
-                
+
             </div>
             <div>
                 <button onclick="cadastrarUsuario()" type="button">Cadastrar</button>
