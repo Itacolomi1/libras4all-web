@@ -125,7 +125,7 @@ async function montaTabela() {
                 "visible": false,
                 "searchable": false
             },
-            { "width": "50%", "targets": 1 }
+            { "width": "30%", "targets": 1 }
         ],
         "pageLength": 3,
         "language": {
@@ -140,7 +140,9 @@ async function montaTabela() {
         columns: [
             { data: "_id" },
             { data: "nome" },
+            { data: "nickname" },
             { data: "email" },
+            { data: "libracoins" },
         ],
     });
 
