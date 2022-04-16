@@ -14,8 +14,8 @@ $(document).ready(function () {
     })
         .done(function (data) {
             $('#txtNomeSala').text(data.descricao);
-            $('#txtNomeJogo').text(data.tipoJogo);
-            $('#txtCodigo').text(data.codigo);
+            $('#txtNomeJogo').text("Jogo: "+ data.tipoJogo);
+            $('#txtCodigo').text("Código da sala: "+ data.codigo);
             $("#ckAtivo").prop("checked", data.status == "true");
 
         });

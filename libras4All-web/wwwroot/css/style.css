@@ -463,16 +463,8 @@ table.tabelaSala {
     text-align: center;
     font-weight: bold;
     width: 100%;
+    text-align: center;
 }
-
-#jogo h1 {
-    font-size: 20px;
-    font-family: Arial;
-    margin-left: 20px;
-    text-align: left;
-    position: absolute;
-}
-
 
 
 #jogo {
@@ -480,12 +472,6 @@ table.tabelaSala {
     margin: 0 auto;
 }
 
-    #jogo h2 {
-        font-size: 20px !important;
-        font-family: Arial;
-        margin-left: 20px;
-        text-align: right !important;
-    }
 
 #sala-editar h3 {
     font-size: 17px !important;
@@ -494,12 +480,7 @@ table.tabelaSala {
     text-align: center;
 }
 
-#sala-editar h2 {
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
-    width: 100%;
-}
+
 
 #sala-editar .status {
     margin-top: 15px;
