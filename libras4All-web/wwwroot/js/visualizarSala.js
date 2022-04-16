@@ -29,11 +29,11 @@ function buscarSala() {
         async: false,
         headers: {
             Authorization: 'Bearer ' + token
-        }
+        },     
     })
         .done(function (data) {
             sala = data;
-            $('#txtSala').text(data.descricao);
+            $('#txtSala').text("Sala: "+ data.descricao);
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
             alert("Erro ao buscar a sala!");
         });
@@ -216,6 +216,7 @@ function buscarRanking() {
         headers: {
             Authorization: 'Bearer ' + token
         },
+      
     })
         .done(function (data) {
 
@@ -236,7 +237,6 @@ function buscarAlunos() {
 }
 
 function popularRanking() {
-
 
     $('#ranking').show();
 

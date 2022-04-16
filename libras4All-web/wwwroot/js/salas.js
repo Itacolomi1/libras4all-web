@@ -22,7 +22,8 @@ $(document).ready(function () {
     $('#tbSalas').DataTable({
         dom: "Bfrtip",
         "columnDefs": [
-            { "width": "50%", "targets": 1 }
+            { "width": "50%", "targets": 1 },
+
         ],
         "pageLength": 3,
         "language": {

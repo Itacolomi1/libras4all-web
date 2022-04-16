@@ -17,8 +17,9 @@ body, html {
 #tabelaAlunos_wrapper, #tabelaRanking_wrapper {
     height: 75%;
     overflow-x: hidden;
-    padding-right: 5px;
+    padding: 5px;
 }
+
 #tabelaAlunos, #tabelaSalas {
     cursor: pointer;
 }
@@ -123,12 +124,12 @@ li.activo {
         height: 200px;
     }
 
-  
+
         #nova_sala .jogos div, #home .jogos div {
             width: calc(95%/3);
             height: 200px;
             background-size: contain;
-            cursor:pointer;
+            cursor: pointer;
         }
 
         #nova_sala .jogos .meteoro {
@@ -152,6 +153,7 @@ li.activo {
 .jogos .quiz {
     background-image: url("../images/quiz.png");
 }
+
 #nova_sala .jogos .quiz {
     background-image: url("../images/quiz.png");
     border-radius: 10px;
@@ -221,21 +223,21 @@ button.salvar {
     height: 300px;
 }
 
-    #salas button {
-        height: 30px;
-        border: none;
-        border-radius: 10px;
-        font-family: "Open Sans", Sans-serif;
-        font-size: 12px;
-        text-transform: uppercase;
-        font-weight: bold;
-        border: none;
-        color: white;
-        background: rgb(35 36 95);
-        margin-top: 50px;
-        margin-left: 10px;
-        width: 100px;
-    }
+#salas button {
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: rgb(35 36 95);
+    margin-top: 50px;
+    margin-left: 10px;
+    width: 100px;
+}
 
 .privacy {
     margin: 30px;
@@ -254,7 +256,6 @@ button.salvar {
 
     .privacy h3 {
         font-size: 20px;
-      
         font-weight: bold;
         width: 100%;
         font-family: "Monaco", "Courier New", monospace;
@@ -264,7 +265,7 @@ button.salvar {
         text-align: justify;
         text-indent: 10px;
     }
-   
+
 
 #divTabela {
     width: 90%;
@@ -274,13 +275,13 @@ button.salvar {
 tr {
     font-size: 13px;
 }
+
 #info h2 {
     text-align: center;
     font-size: 15px;
 }
 
 .container {
-    
     text-align: center;
 }
 
@@ -390,8 +391,9 @@ table.tabelaSala {
 }
 
 
-#alunos .baixo, #sala-visualizar .baixo{
-    width: 44%;
+#alunos .baixo, #sala-visualizar .baixo {
+    width: 40%;
+    height: 95%;
 }
 
 #alunos .cima, #sala-visualizar .cima {
@@ -399,11 +401,12 @@ table.tabelaSala {
     border-style: solid;
     border-color: #154C79;
     border-radius: 5px;
-    height: 90%;
+    height: 100%;
 }
 
-#sala-visualizar .cima{
-    cursor:pointer;
+#sala-visualizar .cima {
+    cursor: pointer;
+    height: 95%;
 }
 
 #divSala {
@@ -414,8 +417,8 @@ table.tabelaSala {
     display: none;
 }
 
-#tabelaItens{
-    display:none;
+#tabelaItens {
+    display: none;
 }
 
 #divDesempenho {
@@ -424,6 +427,7 @@ table.tabelaSala {
     border-color: #154C79;
     margin-right: 10px;
     border-radius: 5px;
+    height: 100% !important;
 }
 
 @font-face {
@@ -446,14 +450,12 @@ table.tabelaSala {
     text-align: center;
 }
 
-    #sala-visualizar h1, #sala-editar h1 {
-        font-size: 35px;
-        text-align: center;
-        font-weight: bold;
-        width: 100%;
-        
-        
-    }
+#sala-visualizar h1, #sala-editar h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
 
 
 #sala-editar h2 {
@@ -479,18 +481,18 @@ table.tabelaSala {
 }
 
     #jogo h2 {
-        font-size: 20px !important;        
+        font-size: 20px !important;
         font-family: Arial;
         margin-left: 20px;
         text-align: right !important;
     }
 
-    #sala-editar h3 {
-        font-size: 17px !important;
-        font-family: Arial;
-        margin-left: 20px;
-        text-align: center;
-    }
+#sala-editar h3 {
+    font-size: 17px !important;
+    font-family: Arial;
+    margin-left: 20px;
+    text-align: center;
+}
 
 #sala-editar h2 {
     font-size: 15px;
@@ -504,8 +506,8 @@ table.tabelaSala {
     margin-bottom: 15px;
 }
 
-.status label{
-    font-size:15px;
+.status label {
+    font-size: 15px;
 }
 
 #perfil label {
@@ -550,8 +552,7 @@ p, label {
 }
 
 #ranking {
-    display:none;
-
+    display: none;
 }
 
 
@@ -579,10 +580,13 @@ p, label {
 }
 
 #imagemRanking img {
-    width: 5%;
-    height: 5%;
-    margin-left: 310px;
+    width: 32%;
+    height: 32%;
+    margin-left: 180px;
+    opacity: 0.2;
+    margin-top: 10px
 }
+
 #imagemRanking {
     width: 100%;
     position: absolute;
@@ -597,11 +601,14 @@ p, label {
     margin-right: 10px
 }
 
+.direita .baixo h1 {
+    font-size:15px;
+}
+
 #jogoMeteoro:hover, #jogoQuiz:hover, #jogoMestre:hover {
-    border-style: solid;   
+    border-style: solid;
     border-radius: 30px;
     transition: width 2s;
-   
 }
 
 #jogoSelecionado {
@@ -637,13 +644,61 @@ p, label {
     border-color: #154C79;
     border-radius: 5px;
 }
-#alunos .direita{
+
+#alunos .direita {
     width: 100%;
     height: 50%;
-    padding: 5px;
+    padding: 0px;
     display: flex;
     margin-top: 10px;
 }
+
+#icons #coin {
+    width: 4%;
+    height: 4%;
+    position: absolute;
+    margin-left: 465px;
+    margin-top: 38px;
+}
+
+.paginate_button.current{
+    border-radius:20px !important;
+}
+
+
+#icons {
+    display: none;
+}
+table.dataTable.display tbody tr:hover {
+
+    background-color: lightcyan !important;
+}
+
+
+#icons #perfil {
+    width: 3%;
+    height: 3%;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 105px;
+}
+
+#icons #user {
+    width: 3%;
+    height: 3%;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 40px;
+}
+
+#icons #email {
+    width: 4%;
+    height: 4%;
+    position: absolute;
+    margin-left: 340px;
+    margin-top: 39px;
+}
+
 
 .square label {
     color: white;
@@ -652,22 +707,25 @@ p, label {
 
 #privacy input {
     margin: 5px;
-   
     width: 3%;
 }
+
 #privacy a {
     margin-left: 5;
 }
+
 #privacy label {
     justify-content: center;
     align-items: center;
     display: flex;
 }
+
 #checkboxp {
     margin-right: 5px;
     margin-bottom: 0;
     margin-top: 0;
 }
+
 #sala-visualizar .direita {
     width: 100%;
     height: 54%;
@@ -685,14 +743,13 @@ p, label {
 
 #tabelaSalas_wrapper, #tabelaItens_wrapper {
     overflow-x: hidden;
-    height: 75%;
-    padding-right: 5px;
+    height: 85%;
+    padding: 5px;
+  
 }
 
-#login, #cadastro {
-    background: white;
-    height: 100%;
-    width: 100%;
+#graficoItens .chartjs-render-monitor {
+    width:40% !important;
 }
 
 .square button {
@@ -845,7 +902,6 @@ button.login {
 }
 
 #imagem-logo {
-    
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -882,8 +938,8 @@ button.login {
     top: 0;
     bottom: 0;
     margin: auto;
-
 }
+
 #exampleDropdownFormPassword1, #exampleDropdownFormPassword2, #exampleDropdownFormPassword3, #exampleDropdownFormPassword4 {
     width: 100%;
     margin-top: 0;
@@ -896,14 +952,14 @@ button.login {
     padding-right: 33px;
 }*/
 
-.swal-modal{
-    width:30%;
-
+.swal-modal {
+    width: 30%;
 }
 
-.swal-text{
-    text-align:justify !important;
+.swal-text {
+    text-align: justify !important;
 }
+
 .engloba-senha {
     position: relative;
     width: 51% !important;
@@ -912,13 +968,15 @@ button.login {
     margin-bottom: 30px;
     margin-top: 5px;
 }
-#redefinicao img{
-    border-color:green;
+
+#redefinicao img {
+    border-color: green;
 }
 
 #sala-editar .status {
     text-align: center;
 }
+
 }
 
 .square p {
@@ -926,6 +984,7 @@ button.login {
     text-align: center;
     color: white;
 }
+
 #cadastro .square {
     height: calc(100% - 55px);
 }
@@ -1014,6 +1073,7 @@ button.login {
             border: none;
             color: white;
         }
+
 #nova_pergunta {
     cursor: pointer;
 }
@@ -1024,42 +1084,42 @@ button.login {
     margin-top: 15px;
 }
 
-    #modal_quiz #nova_pergunta, #modal_quiz #historia, #modal_quiz #numerais, #modal_quiz #saudacoes, #modal_quiz #alfabeto, #modal_quiz #customizadas {
-        background: white;
-        width: calc(90%/3);
-        height: 75px;
-        margin-top: 10px;
-        color: rgb(35 36 95);
-        text-transform: uppercase;
-        border-radius: 10px;
+#modal_quiz #nova_pergunta, #modal_quiz #historia, #modal_quiz #numerais, #modal_quiz #saudacoes, #modal_quiz #alfabeto, #modal_quiz #customizadas {
+    background: white;
+    width: calc(90%/3);
+    height: 75px;
+    margin-top: 10px;
+    color: rgb(35 36 95);
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#modal_quiz .topicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+    #modal_quiz .topicos button {
+        color: white;
+        background: rgb(35, 36, 95);
+        border: none;
         font-weight: bold;
+        width: 25px;
+        height: 25px;
     }
 
-    #modal_quiz .topicos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-    }
+#modal_quiz button.salvar {
+    width: 100%;
+    background: white;
+    color: rgb(35, 36, 95);
+    margin-top: 10px;
+}
 
-        #modal_quiz .topicos button {
-            color: white;
-            background: rgb(35, 36, 95);
-            border: none;
-            font-weight: bold;
-            width: 25px;
-            height: 25px;
-        }
-
-    #modal_quiz button.salvar {
-        width: 100%;
-        background: white;
-        color: rgb(35, 36, 95);
-     
-        margin-top: 10px;
-    }
-#span{
-    display:none;
+#span {
+    display: none;
 }
 
 
@@ -1155,6 +1215,7 @@ button.login {
     justify-content: center;
     align-items: center;
 }
+
 @media (max-width: 800px) {
     body {
         zoom: 0.5;

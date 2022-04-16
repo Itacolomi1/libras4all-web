@@ -116,7 +116,7 @@ async function CarregaDados() {
 async function montaTabela() {
 
     $('#tabelaAlunos').show();
-
+    $('#icons').show();
     await $('#tabelaAlunos').DataTable({
         dom: "Bfrtip",
         "columnDefs": [
@@ -125,7 +125,7 @@ async function montaTabela() {
                 "visible": false,
                 "searchable": false
             },
-            { "width": "30%", "targets": 1 }
+            { "width": "30%", "targets": 1 },       
         ],
         "pageLength": 3,
         "language": {
