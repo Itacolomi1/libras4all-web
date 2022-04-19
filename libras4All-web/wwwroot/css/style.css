@@ -646,6 +646,10 @@ p, label {
     border-radius:20px !important;
 }
 
+.paginate_button:hover {
+    border-radius: 20px !important;
+}
+
 
 #icons {
     display: none;
@@ -720,6 +724,7 @@ table.dataTable.display tbody tr:hover {
         font-weight: bold;
         font-size: 20px;
         text-align: center;
+        margin-bottom: 0px;
     }
 
 #tabelaSalas_wrapper, #tabelaItens_wrapper {
