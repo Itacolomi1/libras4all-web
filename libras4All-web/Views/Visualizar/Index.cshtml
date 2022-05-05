@@ -12,34 +12,11 @@
 
 <body>
     <div id='sala-visualizar'>
+        <a href="#abrirModal"><img src="~/images/ranking.png" class="img-ranking"></a>
         <h1 id="txtSala"></h1>
 
-        <div id="tableRanking" class="esquerda">
-            <div id="imagemRanking" >
-                <img  src="../images/ranking.png" />
-            </div>
-            <h3>RANKING</h3>
-            <table id="tabelaRanking" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Pontuação</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-        <div  class="direita">
-            <div id="divGrafico" class="baixo">
-                <canvas id="graficoItens" style="width:100%;max-width:600px"></canvas>          
-            </div>
-            <div class="cima" >
-               
+        <div class="direita">
+            <div class="cima">
                 <table id="tabelaItens" class="display" cellspacing="0" width="100%">
                     <thead>
                         <tr>
@@ -52,12 +29,38 @@
                         </tr>
                     </tbody>
                 </table>
-                </div>
             </div>
         </div>
-    <script src="./js/visualizarSala.js"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <div id="divGrafico" class="baixo">
+            <canvas id="graficoItens" width="1200" height="350"></canvas>
+        </div>
+
+        <div id="abrirModal" class="modal-grafico">
+            <a href="#fechar" title="Fechar" class="fechar-grafico">X</a>
+            <div id="tableRanking" class="esquerda">
+                <h3>RANKING</h3>
+                <table id="tabelaRanking" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Pontuação</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+    </div>
+        
+        <script src="./js/visualizarSala.js"></script>
+        <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </body>
 </html>
 

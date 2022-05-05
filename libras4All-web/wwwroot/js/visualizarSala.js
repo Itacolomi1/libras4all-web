@@ -115,6 +115,7 @@ $('#tabelaItens tbody').on('click', 'tr', function () {
     $("#divGrafico").html("<canvas id='graficoItens'></canvas>");
     var idItem = tabelaItem.row(this).data()._id;
     buscarDadosGrafico(idItem);
+    
 });
 
 function buscarDadosGrafico(idItem) {
@@ -245,7 +246,7 @@ function popularRanking() {
         bFilter: false,
         bInfo: false,
         "ordering": false,
-        "paging": false,
+        "pageLength": 5,
         "language": {
             "paginate": {
                 "previous": "Anterior",
