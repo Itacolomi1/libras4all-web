@@ -3,8 +3,20 @@
 
 // Write your JavaScript code.
 var c = 0;
+window.onload = function () {
+    var url = window.location.href;
+    url = url.split('com/');
+    url = url[1];
+    $('#menu1 li').each(function () {
+        if ($('a', this).attr('href') == url) {
+            $(this).addClass('activo');
+        }
+    });
+}
+
 
 $(function () {
+   
     $(".input-search").keyup(function () {
         //pega o css da tabela 
         var tabela = $(this).attr('alt');
