@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+    // testando
     if (localStorage.getItem('user_token') == null || localStorage.getItem('user_id') == null) {
         swal({
             title: "Atenção!",
