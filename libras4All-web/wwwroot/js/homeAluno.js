@@ -19,7 +19,7 @@ $(document).ready(function () {
             icon: "warning",
             button: "OK!",
         }).then(() => {
-            window.location = "https://libras4all-web.herokuapp.com/Login";
+            window.location = "https://libras4all-portal.herokuapp.com/Login";
         });  
         //alert("ATENÇÃO!! Você precisa estar logado para acessar está página");
        

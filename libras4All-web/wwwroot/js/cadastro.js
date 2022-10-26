@@ -101,7 +101,7 @@ function cadastrarUsuario() {
                                 confirmButtonText: "OK!",
                             })
 
-                            window.location = "https://libras4all-web.herokuapp.com/Login";
+                            window.location = "https://libras4all-portal.herokuapp.com/Login";
                         })
                         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
 

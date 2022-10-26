@@ -21,7 +21,7 @@
             localStorage.setItem('user_id', JSON.stringify(data._id));          
 
             localStorage.setItem('user_id', JSON.stringify(data._id));
-            window.location = "https://libras4all-web.herokuapp.com/Home";
+            window.location = "https://libras4all-portal.herokuapp.com/Home";
            
 
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
@@ -60,7 +60,7 @@ function enviarEmail() {
                 icon: "warning",
                 button: "OK!",
             }).then(() => {
-                window.location = "https://libras4all-web.herokuapp.com/Login";
+                window.location = "https://libras4all-portal.herokuapp.com/Login";
             }); 
            
         })
@@ -72,7 +72,7 @@ function enviarEmail() {
                 icon: "error",
                 button: "OK!",
             }).then(() => {
-                window.location = "https://libras4all-web.herokuapp.com/Login";
+                window.location = "https://libras4all-portal.herokuapp.com/Login";
             });
         });
 }

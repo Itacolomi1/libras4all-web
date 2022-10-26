@@ -13,7 +13,7 @@ $(document).ready(function () {
             icon: "warning",
             button: "OK!",
         }).then(() => {
-            window.location = "https://libras4all-web.herokuapp.com/Login";
+            window.location = "https://libras4all-portal.herokuapp.com/Login";
         });
 
     }
@@ -51,10 +51,10 @@ function Logout() {
     }).then(function (isConfirm) {
         if (isConfirm) {
             window.localStorage.clear();
-            window.location = "https://libras4all-web.herokuapp.com/Login";
+            window.location = "https://libras4all-portal.herokuapp.com/Login";
 
         } else {
-            window.location = "https://libras4all-web.herokuapp.com/Perfil";
+            window.location = "https://libras4all-portal.herokuapp.com/Perfil";
         }
     });
 
