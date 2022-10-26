@@ -18,7 +18,7 @@ $(document).ready(function () {
     var id = localStorage.getItem('user_id').replaceAll("\"", "");
     var token = localStorage.getItem('user_token').replaceAll("\"", "");
 
-    var url = "https://libras4all.herokuapp.com/api/sala/listarSalasProfessor/"
+    var url = "https://libras4all-api.herokuapp.com/api/sala/listarSalasProfessor/"
 
     $.ajax({
         type: "GET",

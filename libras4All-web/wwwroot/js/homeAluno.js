@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 async function AdicionaLista(alunos, token) {
 
-    var url = "https://libras4all.herokuapp.com/api/usuario/";
+    var url = "https://libras4all-api.herokuapp.com/api/usuario/";
     for (i = 0; i < alunos.length; i++) {
 
         var _id = JSON.stringify(alunos[i]).replaceAll('"', "");
@@ -71,7 +71,7 @@ async function AdicionaLista(alunos, token) {
 async function CarregaDadosAlunoSelecionado(id) {
 
 
-    var url = "https://libras4all.herokuapp.com/api/sala/listarSalasAluno/" + id;
+    var url = "https://libras4all-api.herokuapp.com/api/sala/listarSalasAluno/" + id;
 
     await $.ajax({
         type: "GET",
@@ -97,7 +97,7 @@ async function CarregaDadosAlunoSelecionado(id) {
 
 async function CarregaDados() {
 
-    var url = "https://libras4all.herokuapp.com/api/usuario/obterAlunosPorProfessor/" + id;
+    var url = "https://libras4all-api.herokuapp.com/api/usuario/obterAlunosPorProfessor/" + id;
 
     await $.ajax({
         type: "GET",
@@ -205,7 +205,7 @@ async function montaTabelaSalas(dado) {
 
 async function BuscaAcertosErros(id_aluno, id_sala) {
 
-    var url = "https://libras4all.herokuapp.com/api/historico/quantidadePorAluno/" + id_sala + "/" + id_aluno;
+    var url = "https://libras4all-api.herokuapp.com/api/historico/quantidadePorAluno/" + id_sala + "/" + id_aluno;
 
     await $.ajax({
         type: "GET",

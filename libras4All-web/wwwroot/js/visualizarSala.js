@@ -2,7 +2,7 @@
 var id = localStorage.getItem('user_id').replaceAll("\"", "");
 const urlParams = new URLSearchParams(window.location.search);
 const idSala = urlParams.get('Id');
-var url = "https://libras4all.herokuapp.com/api/"
+var url = "https://libras4all-api.herokuapp.com/api/"
 var dadosCompletos = [];
 var itens = [];
 var itensCompletos = [];

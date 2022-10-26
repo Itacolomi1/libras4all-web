@@ -85,7 +85,7 @@ function cadastrarUsuario() {
         if (validarEmail(email)) {
             if (validaSenhaIgual(senha1, senha2)) {
                 if (validaCheck()) {
-                    var url = "https://libras4all.herokuapp.com/api/professor";
+                    var url = "https://libras4all-api.herokuapp.com/api/professor";
 
                     $.ajax({
                         type: "POST",

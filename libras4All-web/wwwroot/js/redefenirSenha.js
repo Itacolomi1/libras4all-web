@@ -1,4 +1,4 @@
-﻿var url = "https://libras4all.herokuapp.com/api/email";
+﻿var url = "https://libras4all-api.herokuapp.com/api/email";
 var urlString = new URL(window.location.href);
 var req = urlString.searchParams.get("req");
 

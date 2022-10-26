@@ -1,5 +1,5 @@
 ﻿function logarUsuario() {
-    var url = "https://libras4all.herokuapp.com/api/professor/login";
+    var url = "https://libras4all-api.herokuapp.com/api/professor/login";
 
     var usuario = {};
     usuario.email = $('#email_user').val();
@@ -38,7 +38,7 @@
 }
 
 function enviarEmail() {
-    var url = "https://libras4all.herokuapp.com/api/email";
+    var url = "https://libras4all-api.herokuapp.com/api/email";
     var txtEmail = $('#txtEmail').val();
     var flag = false;
 

@@ -1,6 +1,6 @@
 ﻿var token;
 var id;
-var url = "https://libras4all.herokuapp.com/api/sala/listarSalasProfessor/";
+var url = "https://libras4all-api.herokuapp.com/api/sala/listarSalasProfessor/";
 
 $(document).ready(function () {
    

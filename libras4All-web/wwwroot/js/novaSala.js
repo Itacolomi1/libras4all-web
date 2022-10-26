@@ -1,4 +1,4 @@
-﻿var url = "https://libras4all.herokuapp.com/api/";
+﻿var url = "https://libras4all-api.herokuapp.com/api/";
 
 var token;
 var id;
