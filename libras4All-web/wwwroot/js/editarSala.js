@@ -1,4 +1,4 @@
-﻿var urlSala = "hhttps://libras4all-api.herokuapp.com/api/sala";
+﻿var urlSala = "https://libras4all-api.herokuapp.com/api/sala";
 var token = localStorage.getItem('user_token').replaceAll("\"", "");
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('Id');
